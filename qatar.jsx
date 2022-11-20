@@ -4,6 +4,11 @@ const checkSelection = (teams) => {
   teams.map((team) => $(team).trigger('click'))
 }
 
+// ? Time Constants | Change these to adjust the time between each bet
+const TOTAL_TIME = 5000
+const CONFIRM_TIME = 1000
+const CLOSE_TIME = 4000
+
 // findCombinations
 const findCombination = (originalArr, combo) => {
   const results = []
@@ -58,13 +63,23 @@ const generateSlip = (inputIds, valueAmount = '10') => {
   // Confirm Bet
   setTimeout(() => {
     OnClickConfirmBet()
-  }, 1000)
+  }, CONFIRM_TIME)
 
   // Close Confirmation
   setTimeout(() => {
     OnClickClose()
     console.log('Bet Placed')
-  }, 4000)
+  }, CLOSE_TIME)
+}
+
+// executeCombo
+const executeCombo = (combinations, valueAmount = '10') => {
+  combinations.forEach((combination, i) => {
+    setTimeout(() => {
+      generateSlip(combination, valueAmount)
+      console.log('Starting Combination', i + 1)
+    }, TOTAL_TIME * i)
+  })
 }
 
 // GROUP A
@@ -109,7 +124,7 @@ const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
-// 8x1
+// ! 8x1
 const combinationF8x1 = () => {
   const combinations = [
     [NED, ENG, ARG, TUN, ESP, BEL, SRB, POR],
@@ -129,300 +144,151 @@ const combinationF8x1 = () => {
     [QAT, ENG, ARG, FRA, ESP, MAR, SRB, POR],
     [QAT, ENG, ARG, FRA, ESP, MAR, CMR, POR]
   ]
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination, '100')
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations, '100')
 }
 
 // 6x1
 const combination01F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination02F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination03F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination04F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination05F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination06F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
-// Done 5 times | Total 28 x $50 = $1400
+// Done 5 times @ $10 | Total 28 x 5 x $10 = $1400
 const combination07F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination08F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination09F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination10F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination11F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination12F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination13F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination14F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination15F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination16F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination17F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination18F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination19F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination20F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination21F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination22F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination23F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
 
 const combination24F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
-
-  combinations.forEach((combination, i) => {
-    setTimeout(() => {
-      generateSlip(combination)
-      console.log('Starting Combination', i + 1)
-    }, 5000 * i)
-  })
+  executeCombo(combinations)
 }
