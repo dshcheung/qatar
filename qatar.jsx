@@ -69,6 +69,7 @@ const generateSlip = (inputIds, valueAmount = '10') => {
 
 // GROUP A
 const NED = '#tourn_GPW_50003675_1_1_18994020_0_2_c'
+const QAT = '#tourn_GPW_50003675_1_4_18994020_0_3_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
@@ -93,11 +94,13 @@ const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
 
 // GROUP F
 const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
+const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
 const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
 
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
+const CMR = '#tourn_GPW_50003675_7_4_18990020_0_2_c'
 const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
 const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
 
@@ -110,11 +113,25 @@ const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 const combinationF8x1 = () => {
   const combinations = [
     [NED, ENG, ARG, TUN, ESP, BEL, SRB, POR],
-    [NED, ENG, ARG, FRA, ESP, BEL, SRB, POR]
+    [NED, ENG, ARG, TUN, ESP, BEL, CMR, POR],
+    [NED, ENG, ARG, TUN, ESP, MAR, SRB, POR],
+    [NED, ENG, ARG, TUN, ESP, MAR, CMR, POR],
+    [NED, ENG, ARG, FRA, ESP, BEL, SRB, POR],
+    [NED, ENG, ARG, FRA, ESP, BEL, CMR, POR],
+    [NED, ENG, ARG, FRA, ESP, MAR, SRB, POR],
+    [NED, ENG, ARG, FRA, ESP, MAR, CMR, POR],
+    [QAT, ENG, ARG, TUN, ESP, BEL, SRB, POR],
+    [QAT, ENG, ARG, TUN, ESP, BEL, CMR, POR],
+    [QAT, ENG, ARG, TUN, ESP, MAR, SRB, POR],
+    [QAT, ENG, ARG, TUN, ESP, MAR, CMR, POR],
+    [QAT, ENG, ARG, FRA, ESP, BEL, SRB, POR],
+    [QAT, ENG, ARG, FRA, ESP, BEL, CMR, POR],
+    [QAT, ENG, ARG, FRA, ESP, MAR, SRB, POR],
+    [QAT, ENG, ARG, FRA, ESP, MAR, CMR, POR]
   ]
   combinations.forEach((combination, i) => {
     setTimeout(() => {
-      generateSlip(combination)
+      generateSlip(combination, '100')
       console.log('Starting Combination', i + 1)
     }, 5000 * i)
   })
