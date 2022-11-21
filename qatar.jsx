@@ -83,8 +83,9 @@ const executeCombo = (combinations, valueAmount = '10') => {
 }
 
 // GROUP A
-const NED = '#tourn_GPW_50003675_1_1_18994020_0_2_c'
-const QAT = '#tourn_GPW_50003675_1_4_18994020_0_3_c'
+const ECU = '#tourn_GPW_50003675_1_2_18994020_0_1_c'
+const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
+const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
@@ -124,30 +125,7 @@ const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
-// ! 8x1
-const combinationF8x1 = () => {
-  const combinations = [
-    [NED, ENG, ARG, TUN, ESP, BEL, SRB, POR],
-    [NED, ENG, ARG, TUN, ESP, BEL, CMR, POR],
-    [NED, ENG, ARG, TUN, ESP, MAR, SRB, POR],
-    [NED, ENG, ARG, TUN, ESP, MAR, CMR, POR],
-    [NED, ENG, ARG, FRA, ESP, BEL, SRB, POR],
-    [NED, ENG, ARG, FRA, ESP, BEL, CMR, POR],
-    [NED, ENG, ARG, FRA, ESP, MAR, SRB, POR],
-    [NED, ENG, ARG, FRA, ESP, MAR, CMR, POR],
-    [QAT, ENG, ARG, TUN, ESP, BEL, SRB, POR],
-    [QAT, ENG, ARG, TUN, ESP, BEL, CMR, POR],
-    [QAT, ENG, ARG, TUN, ESP, MAR, SRB, POR],
-    [QAT, ENG, ARG, TUN, ESP, MAR, CMR, POR],
-    [QAT, ENG, ARG, FRA, ESP, BEL, SRB, POR],
-    [QAT, ENG, ARG, FRA, ESP, BEL, CMR, POR],
-    [QAT, ENG, ARG, FRA, ESP, MAR, SRB, POR],
-    [QAT, ENG, ARG, FRA, ESP, MAR, CMR, POR]
-  ]
-  executeCombo(combinations, '100')
-}
-
-// 6x1
+// ! 6x1
 const combination01F6x1 = () => {
   const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
@@ -291,4 +269,44 @@ const combination24F6x1 = () => {
   const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
   const combinations = findCombination(teams, 6)
   executeCombo(combinations)
+}
+
+// TBR
+// const teams04 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+// const teams08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+// const teams12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+// const teams16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+const new12ComboF6x1 = () => {
+  const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+
+  const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams28 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+
+  const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams30 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+
+  const teams31 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams32 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+
+  const teams33 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams34 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+
+  const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams36 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+}
+
+// TBR
+// [ECU, ENG, ARG, TUN, ESP, MAR, CMR, POR]
+// [ECU, ENG, ARG, FRA, ESP, MAR, CMR, POR]
+const new6ComboF8x8 = () => {
+  const combinations = [
+    [ECU, ENG, ARG, TUN, ESP, BEL, SRB, POR],
+    [ECU, ENG, ARG, TUN, ESP, BEL, CMR, POR],
+    [ECU, ENG, ARG, TUN, ESP, MAR, SRB, POR],
+    [ECU, ENG, ARG, FRA, ESP, BEL, SRB, POR],
+    [ECU, ENG, ARG, FRA, ESP, BEL, CMR, POR],
+    [ECU, ENG, ARG, FRA, ESP, MAR, SRB, POR]
+  ]
+  executeCombo(combinations, '100')
 }
