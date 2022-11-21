@@ -33,7 +33,7 @@ const findCombination = (originalArr, combo) => {
 }
 
 // Create, Send, Confirm Bet
-const generateSlip = (inputIds, valueAmount = '10') => {
+const generateSlip = (inputIds, valueAmount = '10', formula = '1') => {
   // Tick Odds
   inputIds.forEach((id) => {
     $(id).trigger('click')
@@ -48,6 +48,7 @@ const generateSlip = (inputIds, valueAmount = '10') => {
   }
 
   $('#inputAllUp').val(valueAmount)
+  $('#sel_formula').val(formula)
 
   // Create Add Up Slip
   CreateAndAddAllUp()
@@ -73,10 +74,10 @@ const generateSlip = (inputIds, valueAmount = '10') => {
 }
 
 // executeCombo
-const executeCombo = (combinations, valueAmount = '10') => {
+const executeCombo = (combinations, valueAmount = '10', formula = '1') => {
   combinations.forEach((combination, i) => {
     setTimeout(() => {
-      generateSlip(combination, valueAmount)
+      generateSlip(combination, valueAmount, formula)
       console.log('Starting Combination', i + 1)
     }, TOTAL_TIME * i)
   })
@@ -125,158 +126,82 @@ const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
-// ! 6x1
-const combination01F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
+// 24 * 28 * $10 = $6720
+const combination01To24F6x1 = () => {
+  const teams01 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
+  const teams02 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
+  const teams03 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams04 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams05 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
+  const teams06 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
+  const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams08 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams09 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
+  const teams10 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
+  const teams11 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams12 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  const teams13 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
+  const teams14 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
+  const teams15 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams16 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  const teams17 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams18 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams19 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams20 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  const teams21 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
+  const teams22 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
+  const teams23 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
+  const teams24 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
+
+  const combinations = [
+    ...findCombination(teams01, 6),
+    ...findCombination(teams02, 6),
+    ...findCombination(teams03, 6),
+    ...findCombination(teams04, 6),
+    ...findCombination(teams05, 6),
+    ...findCombination(teams06, 6),
+    ...findCombination(teams07, 6),
+    ...findCombination(teams08, 6),
+    ...findCombination(teams09, 6),
+    ...findCombination(teams10, 6),
+    ...findCombination(teams11, 6),
+    ...findCombination(teams12, 6),
+    ...findCombination(teams13, 6),
+    ...findCombination(teams14, 6),
+    ...findCombination(teams15, 6),
+    ...findCombination(teams16, 6),
+    ...findCombination(teams17, 6),
+    ...findCombination(teams18, 6),
+    ...findCombination(teams19, 6),
+    ...findCombination(teams20, 6),
+    ...findCombination(teams21, 6),
+    ...findCombination(teams22, 6),
+    ...findCombination(teams23, 6),
+    ...findCombination(teams24, 6)
+  ]
   executeCombo(combinations)
 }
 
-const combination02F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
+// 28 * $10 * 4 times = $1120
+const extraCombination07F6x1 = () => {
+  const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const combinations = [
+    ...findCombination(teams07, 6),
+    ...findCombination(teams07, 6),
+    ...findCombination(teams07, 6),
+    ...findCombination(teams07, 6)
+  ]
   executeCombo(combinations)
 }
 
-const combination03F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
+// 12 * 28 * $10 = $3360
+const combination25To36F6x1 = () => {
+  // TBR
+  // const teams04 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  // const teams08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  // const teams12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  // const teams16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
 
-const combination04F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination05F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination06F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-// Done 5 times @ $10 | Total 28 x 5 x $10 = $1400
-const combination07F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination08F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination09F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination10F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination11F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination12F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination13F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination14F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination15F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination16F6x1 = () => {
-  const teams = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination17F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination18F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination19F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination20F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination21F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination22F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination23F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-const combination24F6x1 = () => {
-  const teams = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
-  const combinations = findCombination(teams, 6)
-  executeCombo(combinations)
-}
-
-// TBR
-// const teams04 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-// const teams08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-// const teams12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-// const teams16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-const new12ComboF6x1 = () => {
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
@@ -290,7 +215,6 @@ const new12ComboF6x1 = () => {
   const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
   const teams36 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
 
-  // 12 * 28 * 10 = 3360
   const combinations = [
     ...findCombination(teams25, 6),
     ...findCombination(teams26, 6),
@@ -308,17 +232,89 @@ const new12ComboF6x1 = () => {
   executeCombo(combinations)
 }
 
-// TBR
-// [ECU, ENG, ARG, TUN, ESP, MAR, CMR, POR]
-// [ECU, ENG, ARG, FRA, ESP, MAR, CMR, POR]
-const new6ComboF8x8 = () => {
+// 12 * 7 * $10 = $840
+const combination25To36WithoutGroupEF6x1 = () => {
+  const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
+  const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
+  const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
+  const teams28 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
+  const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
+  const teams30 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
+  const teams31 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, MAR_BEL, SRB_BRA, POR_URU]
+  const teams32 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, MAR_BEL, SRB_BRA, POR_URU]
+  const teams33 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, CMR_BRA, POR_URU]
+  const teams34 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, CMR_BRA, POR_URU]
+  const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, CMR_BRA, POR_URU]
+  const teams36 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, CMR_BRA, POR_URU]
+
+  const combinations = [
+    ...findCombination(teams25, 6),
+    ...findCombination(teams26, 6),
+    ...findCombination(teams27, 6),
+    ...findCombination(teams28, 6),
+    ...findCombination(teams29, 6),
+    ...findCombination(teams30, 6),
+    ...findCombination(teams31, 6),
+    ...findCombination(teams32, 6),
+    ...findCombination(teams33, 6),
+    ...findCombination(teams34, 6),
+    ...findCombination(teams35, 6),
+    ...findCombination(teams36, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// (6 * 7 * $10) * 2 times = $840 | Odds Team $20 Extra
+// (1 * 7 * $10) * 2 times = $140 | Team25 $20 Extra
+// $840 + $140 = $980
+const combination25To36WithoutGroupEAndNEDF6x1 = () => {
+  const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
+  const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
+  const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
+  const teams31 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, MAR_BEL, SRB_BRA, POR_URU]
+  const teams33 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, CMR_BRA, POR_URU]
+  const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, CMR_BRA, POR_URU]
+
+  const combinations = [
+    ...findCombination(teams25, 6),
+    ...findCombination(teams25, 6),
+
+    ...findCombination(teams25, 6),
+    ...findCombination(teams27, 6),
+    ...findCombination(teams29, 6),
+    ...findCombination(teams31, 6),
+    ...findCombination(teams33, 6),
+    ...findCombination(teams35, 6),
+
+    ...findCombination(teams25, 6),
+    ...findCombination(teams27, 6),
+    ...findCombination(teams29, 6),
+    ...findCombination(teams31, 6),
+    ...findCombination(teams33, 6),
+    ...findCombination(teams35, 6)
+  ]
+
+  executeCombo(combinations)
+}
+
+// 5 * 9 * $100 = $4500
+const groupWinnerF8x9 = () => {
+  // TBR
+  // [ECU, ENG, ARG, TUN, ESP, MAR, CMR, POR]
+  // [ECU, ENG, ARG, FRA, ESP, MAR, CMR, POR]
+  // [ECU, ENG, ARG, FRA, ESP, BEL, SRB, POR],
+
   const combinations = [
     [ECU, ENG, ARG, TUN, ESP, BEL, SRB, POR],
     [ECU, ENG, ARG, TUN, ESP, BEL, CMR, POR],
     [ECU, ENG, ARG, TUN, ESP, MAR, SRB, POR],
-    [ECU, ENG, ARG, FRA, ESP, BEL, SRB, POR],
     [ECU, ENG, ARG, FRA, ESP, BEL, CMR, POR],
     [ECU, ENG, ARG, FRA, ESP, MAR, SRB, POR]
   ]
-  executeCombo(combinations, '100')
+
+  // 5 * 9 * 100 = 4500
+  executeCombo(combinations, '100', '9')
 }
+
+// ! Total Without Error
+// $6720 + $1120 + $3360 + $840 + $980 + $4500 = $17520
