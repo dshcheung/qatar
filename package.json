@@ -1,0 +1,24 @@
+{
+  "name": "qatar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "qatar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dshcheung/qatar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dshcheung/qatar/issues"
+  },
+  "homepage": "https://github.com/dshcheung/qatar#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
