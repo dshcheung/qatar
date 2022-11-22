@@ -370,10 +370,6 @@ const adjustment_c_25_to_36_evens_w_iran_F6x1 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// ! Total Without Error
-// $6720 + $1120 + $3360 + $840 + $980 + $4500 = $17520
-
-// ! AMOUNT SPENT
 // ! Nov 20
 // c_01_to_16_F6x1 @ $10 = 24 * 28 * $10 = $6720
 // extra_c_07_F6x1 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
