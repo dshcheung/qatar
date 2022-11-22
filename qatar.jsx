@@ -402,7 +402,7 @@ const c_37_to_42_wo_group_E_F6x1_7C6 = () => { // eslint-disable-line
 
 // ? Nov 22 | D | $200 | Reward Amount = (4.5 * 5.25 * 9.5 * 25) * $200 = 5610 * $200 = $1122000
 // ? Nov 22 | J | $400 | Reward Amount = (4.5 * 5.25 * 9.5 * 25) * $400 = 5610 * $200 = $2244000
-const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
+const c_37_to_42_group_A_to_D_IRN_F4x1_4C4 = () => { // eslint-disable-line
   const combinations = [
     [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA]
   ]
@@ -410,7 +410,7 @@ const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
 }
 
 // ? Nov 22 | $100 | Reward Amount = (4.5 * 2.4* 9.5* 25) * $200 = 2565 * $100 = $256500
-const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
+const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   const combinations = [
     [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA]
   ]
