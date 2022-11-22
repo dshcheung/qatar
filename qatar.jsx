@@ -1,6 +1,6 @@
 // ! COPY THIS IN A FRESH HKJC CONSOLE START
 // ? Check Selection | Remember to check team combination before placing bets
-const checkSelection = (teams) => {
+const checkSelection = (teams) => { // eslint-disable-line
   teams.map((team) => $(team).trigger('click'))
 }
 
@@ -69,7 +69,7 @@ const generateSlip = (inputIds, valueAmount = '10', formula = '1') => {
   // Close Confirmation
   setTimeout(() => {
     OnClickClose()
-    console.log('Bet Placed')
+    console.log('Bet Placed') // eslint-disable-line
   }, CLOSE_TIME)
 }
 
@@ -78,7 +78,7 @@ const executeCombo = (combinations, valueAmount = '10', formula = '1') => {
   combinations.forEach((combination, i) => {
     setTimeout(() => {
       generateSlip(combination, valueAmount, formula)
-      console.log('Starting Combination', i + 1)
+      console.log('Starting Combination', i + 1) // eslint-disable-line
     }, TOTAL_TIME * i)
   })
 }
@@ -129,7 +129,7 @@ const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 
 // ! Main Combination 01-24
 // ? Nov 20 | 24 * 28 * $10 = $6720
-const c_01_to_16_F6x1 = () => {
+const c_01_to_16_F6x1 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
   // NED_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
@@ -200,7 +200,7 @@ const c_01_to_16_F6x1 = () => {
 }
 
 // ? Nov 20 | 28 * $10 * 4 times = $1120
-const extra_c_07_F6x1 = () => {
+const extra_c_07_F6x1 = () => { // eslint-disable-line
   const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = [
     ...findCombination(teams07, 6),
@@ -213,7 +213,7 @@ const extra_c_07_F6x1 = () => {
 
 // ! Main Combination 25-36
 // ? Nov 21 | 12 * 28 * $10 = $3360
-const c_25_to_36_F6x1 = () => {
+const c_25_to_36_F6x1 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
   // ECU_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
@@ -255,7 +255,7 @@ const c_25_to_36_F6x1 = () => {
 }
 
 // ? Nov 21 | 12 * 7 * $10 = $840
-const extra_c_25_to_36_wo_group_E_F6x1 = () => {
+const extra_c_25_to_36_wo_group_E_F6x1 = () => { // eslint-disable-line
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
@@ -289,7 +289,7 @@ const extra_c_25_to_36_wo_group_E_F6x1 = () => {
 // ? Nov 21 | (6 * 7 * $10) * 2 times = $840 | Odds Team $20 Extra
 // (1 * 7 * $10) * 2 times = $140 | Team25 $20 Extra
 // $840 + $140 = $980
-const extra_c_25_to_36_odds_wo_group_E_F6x1 = () => {
+const extra_c_25_to_36_odds_wo_group_E_F6x1 = () => { // eslint-disable-line
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
   const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
@@ -320,7 +320,7 @@ const extra_c_25_to_36_odds_wo_group_E_F6x1 = () => {
 }
 
 // ? Nov 21 | 5 * 9 * $100 = $4500
-const group_winner_c_25_To_36_F8x9 = () => {
+const group_winner_c_25_To_36_F8x9 = () => { // eslint-disable-line
   // Base Teams
   // A   B   C   D   E   F   G   H
   // ECU ENG ARG TUN ESP BEL SRB POR
@@ -345,13 +345,13 @@ const group_winner_c_25_To_36_F8x9 = () => {
 
 // ? Nov 21 | D | $1000 | Reward Amount = 56.2 * $1000 = $56,200
 // ? Nov 21 | J | $2000 | Reward Amount = 56.2 * $2000 = $112,400
-const group_winner_stop_loss_c_25_to_36_F5x1 = () => {
+const group_winner_stop_loss_c_25_to_36_F5x1 = () => { // eslint-disable-line
   const teams = [ECU, ENG, ARG, SRB, POR] // 3.6*1.35*1.29*5.9*1.52 = 56.2
   executeCombo([teams], '1000')
 }
 
 // ! TO BE EXECUTED | Nov 22 | 5 * 9 * $100 = $4500
-const adjustment_c_25_to_36_evens_w_iran_F6x1 = () => {
+const adjustment_c_25_to_36_evens_w_iran_F6x1 = () => { // eslint-disable-line
   const teams26 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const teams28 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const teams30 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
