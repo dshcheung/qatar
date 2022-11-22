@@ -409,6 +409,14 @@ const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
+// ? Nov 22 | $100 | Reward Amount = (4.5 * 2.4* 9.5* 25) * $200 = 2565 * $100 = $256500
+const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA]
+  ]
+  executeCombo(combinations, '200')
+}
+
 // ! Nov 20
 // c_01_to_24_F6x1_8C6 @ $10 = 24 * 28 * $10 = $6720
 // extra_c_07_F6x1_8C6 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
@@ -429,9 +437,9 @@ const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
 // c_37_to_42_wo_group_E_F6x1_7C6 @ $10 = 6 * 7 * $10 = $420
 // Denis | c_37_to_42_group_A_to_D_F4x1_4C4 @ $200 = $200
 // Jason | c_37_to_42_group_A_to_D_F4x1_4C4 @ $400 = $400
-// ? Denis Total = $1680 + $420 + $200 = $2300
-// ? Jason Total = $1680 + $420 + $400 = $2500
+// ? Denis Total = $1680 + $420 + $200 + $100 = $2400
+// ? Jason Total = $1680 + $420 + $400 + $100 = $2600
 
 // ! Total without failed
-// ! Denis Total | $7840 + $10680 + $2300 = $20820
-// ! Jason Total | $7840 + $11680 + $2500 = $22020
+// ! Denis Total | $7840 + $10680 + $2300 = $20920
+// ! Jason Total | $7840 + $11680 + $2500 = $22120
