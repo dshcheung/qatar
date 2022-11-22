@@ -93,6 +93,7 @@ const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 // GROUP B
 const ENG = '#tourn_GPW_50003675_2_1_18995020_0_1_c'
 const ENG_USA = '#tourn_GPF_50003675_2_0102_79325019_0_2_c'
+const ENG_IRN = '#tourn_GPF_50003675_2_0104_79325019_0_1_c'
 
 // GROUP C
 const ARG = '#tourn_GPW_50003675_3_1_18989020_0_1_c'
@@ -126,32 +127,48 @@ const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
+// ! Main Combination 01-24
 // 24 * 28 * $10 = $6720
-const combination01To24F6x1 = () => {
-  const teams01 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const teams02 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const teams03 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams04 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams05 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const teams06 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams08 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams09 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const teams10 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
-  const teams11 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams12 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const teams13 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const teams14 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
-  const teams15 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams16 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const teams17 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams18 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams19 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams20 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  const teams21 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU]
-  const teams22 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU]
-  const teams23 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU]
-  const teams24 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU]
+const combination01To16F6x1 = () => {
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
+  // QAT_NED                 FRA_TUN ESP_CRC MAR_BEL CMR_BRA
+
+  // Ignored
+  // const temps03 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 19
+  // const temps04 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 20
+  // const temps07 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU] // 23
+  // const temps08 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU] // 24
+  // const temps09 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 25
+  // const temps10 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 26
+  // const temps13 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU] // 29
+  // const temps14 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU] // 30
+
+  const teams01 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU] // 13
+  const teams02 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU] // 15
+  const teams03 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 09
+  const teams04 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 11
+  const teams05 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU] // 05
+  const teams06 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU] // 07
+  const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 01
+  const teams08 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 03
+  const teams09 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU] // 14
+  const teams10 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU] // 16
+  const teams11 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 10
+  const teams12 = [NED_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 12
+  const teams13 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU] // 06
+  const teams14 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU] // 08
+  const teams15 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 02
+  const teams16 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 04
+  const teams17 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 17
+  const teams18 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 27
+  const teams19 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 18
+  const teams20 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 28
+  const teams21 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, SRB_BRA, POR_URU] // 21
+  const teams22 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, SRB_BRA, POR_URU] // 31
+  const teams23 = [QAT_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_CRC, BEL_MAR, CMR_BRA, POR_URU] // 22
+  const teams24 = [QAT_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_CRC, MAR_BEL, CMR_BRA, POR_URU] // 32
 
   const combinations = [
     ...findCombination(teams01, 6),
@@ -194,26 +211,31 @@ const extraCombination07F6x1 = () => {
   executeCombo(combinations)
 }
 
+// ! Main Combination 25-36
 // 12 * 28 * $10 = $3360
 const combination25To36F6x1 = () => {
-  // TBR
-  // const teams04 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  // const teams08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  // const teams12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
-  // const teams16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU]
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // ECU_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
+  // ECU_NED                 FRA_TUN         MAR_BEL CMR_BRA
 
-  const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams28 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams30 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams31 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams32 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams33 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams34 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams36 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  // Ignored
+  // const temps04 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 04
+  // const temps08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 08
+  // const temps12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 12
+  // const temps16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 16
+  const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 01
+  const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 09
+  const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 05
+  const teams28 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 13
+  const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 03
+  const teams30 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 11
+  const teams31 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 07
+  const teams32 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 15
+  const teams33 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 02
+  const teams34 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 10
+  const teams35 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 06
+  const teams36 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 14
 
   const combinations = [
     ...findCombination(teams25, 6),
@@ -267,7 +289,7 @@ const combination25To36WithoutGroupEF6x1 = () => {
 // (6 * 7 * $10) * 2 times = $840 | Odds Team $20 Extra
 // (1 * 7 * $10) * 2 times = $140 | Team25 $20 Extra
 // $840 + $140 = $980
-const combination25To36WithoutGroupEAndNEDF6x1 = () => {
+const combination25To36OddsWithoutGroupEF6x1 = () => {
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
   const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
@@ -298,18 +320,23 @@ const combination25To36WithoutGroupEAndNEDF6x1 = () => {
 }
 
 // 5 * 9 * $100 = $4500
-const groupWinnerF8x9 = () => {
-  // TBR
-  // [ECU, ENG, ARG, TUN, ESP, MAR, CMR, POR]
-  // [ECU, ENG, ARG, FRA, ESP, MAR, CMR, POR]
-  // [ECU, ENG, ARG, FRA, ESP, BEL, SRB, POR],
+const combination25To36GroupWinnerF8x9 = () => {
+  // Base Teams
+  // A   B   C   D   E   F   G   H
+  // ECU ENG ARG TUN ESP BEL SRB POR
+  //             FRA     MAR CMR
+
+  // Ignored
+  // [ECU, ENG, ARG, TUN, ESP, MAR, CMR, POR] // 04
+  // [ECU, ENG, ARG, FRA, ESP, BEL, SRB, POR] // 05
+  // [ECU, ENG, ARG, FRA, ESP, MAR, CMR, POR] // 08
 
   const combinations = [
-    [ECU, ENG, ARG, TUN, ESP, BEL, SRB, POR],
-    [ECU, ENG, ARG, TUN, ESP, BEL, CMR, POR],
-    [ECU, ENG, ARG, TUN, ESP, MAR, SRB, POR],
-    [ECU, ENG, ARG, FRA, ESP, BEL, CMR, POR],
-    [ECU, ENG, ARG, FRA, ESP, MAR, SRB, POR]
+    [ECU, ENG, ARG, TUN, ESP, BEL, SRB, POR], // 01
+    [ECU, ENG, ARG, TUN, ESP, BEL, CMR, POR], // 02
+    [ECU, ENG, ARG, TUN, ESP, MAR, SRB, POR], // 03
+    [ECU, ENG, ARG, FRA, ESP, BEL, CMR, POR], // 06
+    [ECU, ENG, ARG, FRA, ESP, MAR, SRB, POR] // 07
   ]
 
   // 5 * 9 * 100 = 4500
@@ -318,9 +345,28 @@ const groupWinnerF8x9 = () => {
 
 // D | $1000 | 56.2 * $1000 = $56,200
 // J | $2000 | 56.2 * $2000 = $112,400
-const groupWinnerStopLossF5x1 = () => {
+const combination25To36GroupWinnerStopLossF5x1 = () => {
   const teams = [ECU, ENG, ARG, SRB, POR] // 3.6*1.35*1.29*5.9*1.52 = 56.2
   executeCombo([teams], '1000')
+}
+
+const combination25To36EvensWithENG_IRNF6x1 = () => {
+  const teams26 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams28 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
+  const teams30 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams32 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
+  const teams34 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+  const teams36 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+
+  const combinations = [
+    ...findCombination(teams26, 6),
+    ...findCombination(teams28, 6),
+    ...findCombination(teams30, 6),
+    ...findCombination(teams32, 6),
+    ...findCombination(teams34, 6),
+    ...findCombination(teams36, 6)
+  ]
+  executeCombo(combinations)
 }
 
 // ! Total Without Error
