@@ -350,7 +350,7 @@ const group_winner_stop_loss_c_25_to_36_F5x1 = () => { // eslint-disable-line
   executeCombo([teams], '1000')
 }
 
-// ! TO BE EXECUTED | Nov 22 | 5 * 9 * $100 = $4500
+// ! TO BE EXECUTED | Nov 22
 const adjustment_c_25_to_36_evens_w_iran_F6x1 = () => { // eslint-disable-line
   const teams26 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const teams28 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
