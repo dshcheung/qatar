@@ -129,7 +129,7 @@ const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
 
 // ! Main Combination 01-24
 // ? Nov 20 | 24 * 28 * $10 = $6720
-const c_01_to_16_F6x1 = () => { // eslint-disable-line
+const c_01_to_24_F6x1_8C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
   // NED_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
@@ -200,7 +200,7 @@ const c_01_to_16_F6x1 = () => { // eslint-disable-line
 }
 
 // ? Nov 20 | 28 * $10 * 4 times = $1120
-const extra_c_07_F6x1 = () => { // eslint-disable-line
+const extra_c_07_F6x1_8C6 = () => { // eslint-disable-line
   const teams07 = [NED_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
   const combinations = [
     ...findCombination(teams07, 6),
@@ -213,7 +213,7 @@ const extra_c_07_F6x1 = () => { // eslint-disable-line
 
 // ! Main Combination 25-36
 // ? Nov 21 | 12 * 28 * $10 = $3360
-const c_25_to_36_F6x1 = () => { // eslint-disable-line
+const c_25_to_36_F6x1_8C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
   // ECU_QAT ENG_USA ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
@@ -224,6 +224,7 @@ const c_25_to_36_F6x1 = () => { // eslint-disable-line
   // const temps08 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 08
   // const temps12 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 12
   // const temps16 = [ECU_NED, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 16
+
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 01
   const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 09
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 05
@@ -255,7 +256,7 @@ const c_25_to_36_F6x1 = () => { // eslint-disable-line
 }
 
 // ? Nov 21 | 12 * 7 * $10 = $840
-const extra_c_25_to_36_wo_group_E_F6x1 = () => { // eslint-disable-line
+const extra_c_25_to_36_wo_group_E_F6x1_7C6 = () => { // eslint-disable-line
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams26 = [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
@@ -286,10 +287,10 @@ const extra_c_25_to_36_wo_group_E_F6x1 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// ? Nov 21 | (6 * 7 * $10) * 2 times = $840 | Odds Team $20 Extra
-// (1 * 7 * $10) * 2 times = $140 | Team25 $20 Extra
-// $840 + $140 = $980
-const extra_c_25_to_36_odds_wo_group_E_F6x1 = () => { // eslint-disable-line
+// ? Nov 21 | ((6 * 7 * $10) * 2 Times) + ((1 * 7 * $10) * 2 Times) = $840 + $140 = $980
+// ? Odds Team $20 Extra
+// ? Team25 $20 Extra
+const extra_c_25_to_36_odds_wo_group_E_F6x1_7C6 = () => { // eslint-disable-line
   const teams25 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
   const teams27 = [ECU_QAT, ENG_USA, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
   const teams29 = [ECU_QAT, ENG_USA, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
@@ -320,7 +321,7 @@ const extra_c_25_to_36_odds_wo_group_E_F6x1 = () => { // eslint-disable-line
 }
 
 // ? Nov 21 | 5 * 9 * $100 = $4500
-const group_winner_c_25_To_36_F8x9 = () => { // eslint-disable-line
+const group_winner_c_25_To_36_F8x9_8C7_AND_8C8 = () => { // eslint-disable-line
   // Base Teams
   // A   B   C   D   E   F   G   H
   // ECU ENG ARG TUN ESP BEL SRB POR
@@ -345,46 +346,92 @@ const group_winner_c_25_To_36_F8x9 = () => { // eslint-disable-line
 
 // ? Nov 21 | D | $1000 | Reward Amount = 56.2 * $1000 = $56,200
 // ? Nov 21 | J | $2000 | Reward Amount = 56.2 * $2000 = $112,400
-const group_winner_stop_loss_c_25_to_36_F5x1 = () => { // eslint-disable-line
+const group_winner_stop_loss_c_25_to_36_F5x1_5C5 = () => { // eslint-disable-line
   const teams = [ECU, ENG, ARG, SRB, POR] // 3.6*1.35*1.29*5.9*1.52 = 56.2
   executeCombo([teams], '1000')
 }
 
-// ! TO BE EXECUTED | Nov 22
-const adjustment_c_25_to_36_evens_w_iran_F6x1 = () => { // eslint-disable-line
-  const teams26 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams28 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU]
-  const teams30 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams32 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU]
-  const teams34 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
-  const teams36 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU]
+// ? Nov 22 | 6 * 28 * $10 = $1680
+const c_37_to_42_F6x1_8C6 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // ECU_NED ENG_IRN ARG_KSA TUN_FRA ESP_GER BEL_MAR SRB_BRA POR_URU
+  //                         FRA_TUN         MAR_BEL CMR_BRA
+
+  // Ignored
+  // const temps04 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 04
+  // const temps08 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, CMR_BRA, POR_URU] // 08
+
+  const teams37 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 01
+  const teams38 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, SRB_BRA, POR_URU] // 05
+  const teams39 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 03
+  const teams40 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, MAR_BEL, SRB_BRA, POR_URU] // 07
+  const teams41 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 02
+  const teams42 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, ESP_GER, BEL_MAR, CMR_BRA, POR_URU] // 06
 
   const combinations = [
-    ...findCombination(teams26, 6),
-    ...findCombination(teams28, 6),
-    ...findCombination(teams30, 6),
-    ...findCombination(teams32, 6),
-    ...findCombination(teams34, 6),
-    ...findCombination(teams36, 6)
+    ...findCombination(teams37, 6),
+    ...findCombination(teams38, 6),
+    ...findCombination(teams39, 6),
+    ...findCombination(teams40, 6),
+    ...findCombination(teams41, 6),
+    ...findCombination(teams42, 6)
   ]
   executeCombo(combinations)
 }
 
+// ? Nov 22 | 6 * 7 * $10 = $420
+const c_37_to_42_wo_group_E_F6x1_7C6 = () => { // eslint-disable-line
+  const teams37 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, BEL_MAR, SRB_BRA, POR_URU]
+  const teams38 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, BEL_MAR, SRB_BRA, POR_URU]
+  const teams39 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, MAR_BEL, SRB_BRA, POR_URU]
+  const teams40 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, MAR_BEL, SRB_BRA, POR_URU]
+  const teams41 = [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA, BEL_MAR, CMR_BRA, POR_URU]
+  const teams42 = [ECU_NED, ENG_IRN, ARG_KSA, FRA_TUN, BEL_MAR, CMR_BRA, POR_URU]
+
+  const combinations = [
+    ...findCombination(teams37, 6),
+    ...findCombination(teams38, 6),
+    ...findCombination(teams39, 6),
+    ...findCombination(teams40, 6),
+    ...findCombination(teams41, 6),
+    ...findCombination(teams42, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// ? Nov 22 | D | $200 | Reward Amount = (4.5 * 5.25 * 9.5 * 25) * $200 = 5610 * $200 = $1122000
+// ? Nov 22 | J | $400 | Reward Amount = (4.5 * 5.25 * 9.5 * 25) * $400 = 5610 * $200 = $2244000
+const c_37_to_42_group_A_to_D_F4x1_4C4 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU_NED, ENG_IRN, ARG_KSA, TUN_FRA]
+  ]
+  executeCombo(combinations, '200')
+}
+
 // ! Nov 20
-// c_01_to_16_F6x1 @ $10 = 24 * 28 * $10 = $6720
-// extra_c_07_F6x1 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
+// c_01_to_24_F6x1_8C6 @ $10 = 24 * 28 * $10 = $6720
+// extra_c_07_F6x1_8C6 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
 // ? Total = 6720 + 1120 = 7840
 
 // ! Nov 21
-// c_25_to_36_F6x1 @ $10 = 12 * 28 * $10 = $3360
-// extra_c_25_to_36_wo_group_E_F6x1 @ $10 = 12 * 7 * $10 = $840
-// extra_c_25_to_36_odds_wo_group_E_F6x1 @ $10 = ((6 * 7 * $10 * 2 Times) + (1 * 7 * $10 * 2 Times)) = $980
-// group_winner_c_25_To_36_F8x9 @ $100 = 5 * 9 * 100 = $4500
-// Denis | group_winner_stop_loss_c_25_to_36_F5x1 @ $1000 = $1000
-// Jason | group_winner_stop_loss_c_25_to_36_F5x1 @ $2000 = $2000
+// c_25_to_36_F6x1_8C6 @ $10 = 12 * 28 * $10 = $3360
+// extra_c_25_to_36_wo_group_E_F6x1_7C6 @ $10 = 12 * 7 * $10 = $840
+// extra_c_25_to_36_odds_wo_group_E_F6x1_7C6 @ $10 = ((6 * 7 * $10 * 2 Times) + (1 * 7 * $10 * 2 Times)) = $840 + $140 = $980
+// group_winner_c_25_To_36_F8x9_8C7_AND_8C8 @ $100 = 5 * 9 * 100 = $4500
+// Denis | group_winner_stop_loss_c_25_to_36_F5x1_5C5 @ $1000 = $1000
+// Jason | group_winner_stop_loss_c_25_to_36_F5x1_5C5 @ $2000 = $2000
 // ? Denis Total = $3360 + $840 + $980 + $4500 + $1000 = $10680
 // ? Jason Total = $3360 + $840 + $980 + $4500 + $2000 = $11680
 
+// ! Nov 22
+// c_37_to_42_F6x1_8C6 @ $10 = 6 * 28 * $10 = $1680
+// c_37_to_42_wo_group_E_F6x1_7C6 @ $10 = 6 * 7 * $10 = $420
+// Denis | c_37_to_42_group_A_to_D_F4x1_4C4 @ $200 = $200
+// Jason | c_37_to_42_group_A_to_D_F4x1_4C4 @ $400 = $400
+// ? Denis Total = $1680 + $420 + $200 = $2300
+// ? Jason Total = $1680 + $420 + $400 = $2500
+
 // ! Total without failed
-// ! Denis Total | $7840 + $10680 = $18520
-// ! Jason Total | $7840 + $11680 = $19520
+// ! Denis Total | $7840 + $10680 + $2300 = $20820
+// ! Jason Total | $7840 + $11680 + $2500 = $22020
