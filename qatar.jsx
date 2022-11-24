@@ -427,7 +427,7 @@ const c_43_to_44_F6x1_8C6 = () => { // eslint-disable-line
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR],
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_KOR]
   ]
-  executeCombo(combinations)
+  executeCombo(combinations, '50')
 }
 
 // TODO: Maybe | 4 * 28 * $10 = $1120
