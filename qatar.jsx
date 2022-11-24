@@ -116,6 +116,7 @@ const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
 const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
 const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
+const BEL_CAN = '#tourn_GPF_50003675_6_0104_79326019_0_1_c'
 
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
