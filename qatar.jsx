@@ -421,7 +421,7 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
-// TODO: Nov 25 | 2 * 28 * $10 = $560
+// TODO: Nov 25 | 2 * 28 * $50 = 2800
 const c_43_to_44_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR],
@@ -430,7 +430,7 @@ const c_43_to_44_F6x1_8C6 = () => { // eslint-disable-line
   executeCombo(combinations, '50')
 }
 
-// TODO: Maybe | 4 * 28 * $10 = $1120
+// TODO: Maybe
 const c_45_to_46_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_URU],
