@@ -421,10 +421,18 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
-// TODO: Nov 25 | 2 * 28 * $50 = 2800
-const c_43_to_44_F6x1_8C6 = () => { // eslint-disable-line
+// TODO: Nov 25 | 1 * 28 * $50 = 1400
+const c_43_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR],
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR]
+  ]
+  executeCombo(combinations, '50')
+}
+
+// ! BET 930 (#6) is largest bet
+// TODO: Nov 25 | 1 * 28 * %50 = 1400
+const c_44_F6x1_8C6 = () => {
+  const combinations = [
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_KOR]
   ]
   executeCombo(combinations, '50')
