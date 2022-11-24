@@ -431,7 +431,7 @@ const c_43_F6x1_8C6 = () => { // eslint-disable-line
 
 // ! BET 930 (#6) is largest bet
 // TODO: Nov 25 | 1 * 28 * %50 = 1400
-const c_44_F6x1_8C6 = () => {
+const c_44_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
     [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_KOR]
   ]
