@@ -98,6 +98,7 @@ const ENG_IRN = '#tourn_GPF_50003675_2_0104_79325019_0_1_c'
 // GROUP C
 const ARG = '#tourn_GPW_50003675_3_1_18989020_0_1_c'
 const ARG_KSA = '#tourn_GPF_50003675_3_0104_79322019_0_3_c'
+const POL_ARG = '#tourn_GPF_50003675_3_0301_79322019_0_7_c'
 
 // GROUP D
 const TUN = '#tourn_GPW_50003675_4_3_18992020_0_4_c'
@@ -121,10 +122,13 @@ const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
 const CMR = '#tourn_GPW_50003675_7_4_18990020_0_2_c'
 const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
 const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
+const BRA_SRB = '#tourn_GPF_50003675_7_0103_79324019_0_2_c'
+const BRA_CMR = '#tourn_GPF_50003675_7_0104_79324019_0_1_c'
 
 // GROUP H
 const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
+const POR_KOR = '#tourn_GPF_50003675_8_0104_79323019_0_8_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
 // ! Main Combination 01-24
@@ -415,6 +419,24 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
     [ECU_NED, ENG_USA, ARG_KSA, TUN_FRA]
   ]
   executeCombo(combinations, '200')
+}
+
+// TODO: Nov 25 | 2 * 28 * $10 = $560
+const c_43_to_44_F6x1_8C6 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR],
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_KOR]
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Maybe | 4 * 28 * $10 = $1120
+const c_45_to_48_F6x1_8C6 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_URU],
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_URU]
+  ]
+  executeCombo(combinations)
 }
 
 // ! Nov 20
