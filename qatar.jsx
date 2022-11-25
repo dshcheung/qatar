@@ -423,7 +423,7 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
-// TODO: Nov 25 | 1 * 28 * $20 = $560
+// TODO: Nov 25 | 1 * 28 * $50 = $1400
 const c_43_F6x1_8C6 = () => { // eslint-disable-line
   const teams43 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
@@ -490,6 +490,13 @@ const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
 // Jason | c_37_to_42_group_A_to_D_F4x1_4C4 @ $400 = $400
 // ? Denis Total = $1680 + $420 + $200 + $100 = $2400
 // ? Jason Total = $1680 + $420 + $400 + $100 = $2600
+
+// ! Nov 25
+// c_43_F6x1_8C6 @ $50 = 1 * 28 * $50 = $1400
+// c_44_F6x1_8C6 @ $20 = 1 * 28 * $20 = $560
+// c_45_F6x1_8C6 @ $10 = 1 * 28 * $10 = $280
+// c_46_to_48_F6x1_8C6 @ $10 = 3 * 28 * $10 = $840
+// ? Total = $1400 + $560 + $280 + $840 = $3080
 
 // ! Total without failed
 // ! Denis Total | $7840 + $10680 + $2300 = $20920
