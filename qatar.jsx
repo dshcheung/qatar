@@ -97,6 +97,7 @@ const ENG_IRN = '#tourn_GPF_50003675_2_0104_79325019_0_1_c'
 
 // GROUP C
 const ARG = '#tourn_GPW_50003675_3_1_18989020_0_1_c'
+const POL = '#tourn_GPW_50003675_3_3_18989020_0_3_c'
 const ARG_KSA = '#tourn_GPF_50003675_3_0104_79322019_0_3_c'
 const POL_ARG = '#tourn_GPF_50003675_3_0301_79322019_0_7_c'
 
@@ -108,6 +109,7 @@ const TUN_FRA = '#tourn_GPF_50003675_4_0301_79320019_0_12_c'
 
 // GROUP E
 const ESP = '#tourn_GPW_50003675_5_1_18988020_0_4_c'
+const JPY = '#tourn_GPW_50003675_5_3_18988020_0_3_c'
 const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
 const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
@@ -121,6 +123,7 @@ const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
 const CMR = '#tourn_GPW_50003675_7_4_18990020_0_2_c'
+const BRA = '#tourn_GPW_50003675_7_1_18990020_0_1_c'
 const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
 const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
 const BRA_SRB = '#tourn_GPF_50003675_7_0103_79324019_0_2_c'
@@ -433,7 +436,6 @@ const c_43_F6x1_8C6 = () => { // eslint-disable-line
   executeCombo(combinations, '50')
 }
 
-// ! BET 930 (#6) is largest bet
 // TODO: Nov 25 | 1 * 28 * $20 = $560
 const c_44_F6x1_8C6 = () => { // eslint-disable-line
   const teams44 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
@@ -468,6 +470,22 @@ const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
+// TODO: Nov 25 | $2500 = $2500
+const group_winner_c_43_to_45_F8x1_8C8 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU, ENG, POL, FRA, JPY, MAR, BRA, POR]
+  ]
+  executeCombo(combinations, '2500')
+}
+
+// TODO: Nov 25 | $500 = $500
+const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU, ENG, POL, FRA, ESP, MAR, BRA, POR]
+  ]
+  executeCombo(combinations, '500')
+}
+
 // ! Nov 20
 // c_01_to_24_F6x1_8C6 @ $10 = 24 * 28 * $10 = $6720
 // extra_c_07_F6x1_8C6 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
@@ -496,7 +514,9 @@ const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
 // c_44_F6x1_8C6 @ $20 = 1 * 28 * $20 = $560
 // c_45_F6x1_8C6 @ $10 = 1 * 28 * $10 = $280
 // c_46_to_48_F6x1_8C6 @ $10 = 3 * 28 * $10 = $840
-// ? Total = $1400 + $560 + $280 + $840 = $3080
+// group_winner_c_43_to_45_F8x1_8C8 @ $2500 = $2500
+// group_winner_c_46_to_48_F8x1_8C8 @ $500 = $500
+// ? Total = $1400 + $560 + $280 + $840 + $2500 + $500 = $6040
 
 // ! Total without failed
 // ! Denis Total | $7840 + $10680 + $2300 = $20920
