@@ -85,8 +85,9 @@ const executeCombo = (combinations, valueAmount = '10', formula = '1') => {
 
 // GROUP A
 const ECU = '#tourn_GPW_50003675_1_2_18994020_0_1_c'
-const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
 const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
+const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
+const NED_ECU = '#tourn_GPF_50003675_1_0102_79327019_0_4_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
@@ -110,25 +111,25 @@ const TUN_FRA = '#tourn_GPF_50003675_4_0301_79320019_0_12_c'
 // GROUP E
 const ESP = '#tourn_GPW_50003675_5_1_18988020_0_4_c'
 const JPY = '#tourn_GPW_50003675_5_3_18988020_0_3_c'
-const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
+const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
 
 // GROUP F
 const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
 const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
-const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
+const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
 
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
 const CMR = '#tourn_GPW_50003675_7_4_18990020_0_2_c'
 const BRA = '#tourn_GPW_50003675_7_1_18990020_0_1_c'
-const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
-const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
+const BRA_SUI = '#tourn_GPF_50003675_7_0102_79324019_0_3_c'
 const BRA_SRB = '#tourn_GPF_50003675_7_0103_79324019_0_2_c'
 const BRA_CMR = '#tourn_GPF_50003675_7_0104_79324019_0_1_c'
-const BRA_SUI = '#tourn_GPF_50003675_7_0102_79324019_0_3_c'
+const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
+const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
 
 // GROUP H
 const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
@@ -494,6 +495,17 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
     [ECU, ENG, POL, FRA, ESP, MAR, BRA, POR]
   ]
   executeCombo(combinations, '500')
+}
+
+// ! Main Combination 49-54
+// TODO: Nov 26
+const c_49_F6x1_8C6 = () => { // eslint-disable-line
+  const teams49 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams50 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams51 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SUI, POR_KOR]
+  const teams52 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams53 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams54 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SUI, POR_KOR]
 }
 
 // ! Nov 20
