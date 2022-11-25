@@ -89,6 +89,7 @@ const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
 const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
+const NED_ECU = '#tourn_GPF_50003675_1_0102_79327019_0_4_c'
 
 // GROUP B
 const ENG = '#tourn_GPW_50003675_2_1_18995020_0_1_c'
@@ -110,6 +111,7 @@ const TUN_FRA = '#tourn_GPF_50003675_4_0301_79320019_0_12_c'
 const ESP = '#tourn_GPW_50003675_5_1_18988020_0_4_c'
 const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
+const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
 
 // GROUP F
 const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
@@ -125,6 +127,7 @@ const SRB_BRA = '#tourn_GPF_50003675_7_0301_79324019_0_7_c'
 const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
 const BRA_SRB = '#tourn_GPF_50003675_7_0103_79324019_0_2_c'
 const BRA_CMR = '#tourn_GPF_50003675_7_0104_79324019_0_1_c'
+const BRA_SUI = '#tourn_GPF_50003675_7_0102_79324019_0_3_c'
 
 // GROUP H
 const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
@@ -422,30 +425,29 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
-// TODO: Nov 25 | 1 * 28 * $50 = 1400
+// TODO: Nov 25 | 1 * 28 * $20 = $560
 const c_43_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_KOR]
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
   ]
-  executeCombo(combinations, '50')
+  executeCombo(combinations, '20')
 }
 
 // ! BET 930 (#6) is largest bet
-// TODO: Nov 25 | 1 * 28 * %50 = 1400
+// TODO: Nov 25 | 1 * 28 * $50 = $1400
 const c_44_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_KOR]
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
   ]
   executeCombo(combinations, '50')
 }
 
-// TODO: Maybe
-const c_45_to_46_F6x1_8C6 = () => { // eslint-disable-line
+// TODO: Nov 45 | 1 * 28 * $20 = $560
+const c_45_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_SRB, POR_URU],
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, BEL_MAR, BRA_CMR, POR_URU]
+    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SUI, POR_URU]
   ]
-  executeCombo(combinations)
+  executeCombo(combinations, '20')
 }
 
 // ! Nov 20
