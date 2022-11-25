@@ -87,7 +87,7 @@ const executeCombo = (combinations, valueAmount = '10', formula = '1') => {
 const ECU = '#tourn_GPW_50003675_1_2_18994020_0_1_c'
 const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
 const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
-const NED_ECU = '#tourn_GPF_50003675_1_0102_79327019_0_4_c'
+const ECU_SEN = '#tourn_GPF_50003675_1_0203_79327019_0_3_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
@@ -110,9 +110,11 @@ const TUN_FRA = '#tourn_GPF_50003675_4_0301_79320019_0_12_c'
 
 // GROUP E
 const ESP = '#tourn_GPW_50003675_5_1_18988020_0_4_c'
-const JPY = '#tourn_GPW_50003675_5_3_18988020_0_3_c'
+const JPN = '#tourn_GPW_50003675_5_3_18988020_0_3_c'
+const GER = '#tourn_GPW_50003675_5_2_18988020_0_2_c'
 const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
 const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
+const GER_JPN = '#tourn_GPF_50003675_5_0203_79321019_0_5_c'
 const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
 
 // GROUP F
@@ -476,7 +478,7 @@ const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
 // ? Nov 25 | $2500 = $2500
 const group_winner_c_43_to_45_F8x1_8C8 = () => { // eslint-disable-line
   const combinations = [
-    [ECU, ENG, POL, FRA, JPY, MAR, BRA, POR]
+    [ECU, ENG, POL, FRA, JPN, MAR, BRA, POR]
   ]
   executeCombo(combinations, '2500')
 }
@@ -484,7 +486,7 @@ const group_winner_c_43_to_45_F8x1_8C8 = () => { // eslint-disable-line
 // ? Nov 25 | 8 * $200 = $1600
 const group_winner_c_43_to_45_F8x8_8C7 = () => { // eslint-disable-line
   const combinations = [
-    [ECU, ENG, POL, FRA, JPY, MAR, BRA, POR]
+    [ECU, ENG, POL, FRA, JPN, MAR, BRA, POR]
   ]
   executeCombo(combinations, '200', '8')
 }
@@ -497,50 +499,25 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '500')
 }
 
-// ! Main Combination 49-54
-// TODO: Nov 26
-const c_49_F6x1_8C6 = () => { // eslint-disable-line
-  const teams49 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
-  const teams50 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
-  const teams51 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SUI, POR_KOR]
-  const teams52 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
-  const teams53 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
-  const teams54 = [NED_ECU, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SUI, POR_KOR]
+// ! Main Combination 49-56
+// TODO: Nov 25 | 2 * 28 * $10 = $1120
+const c_49_to_50_F6x1_8C6 = () => { // eslint-disable-line
+  const teams49 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams50 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams49, 6),
+    ...findCombination(teams49, 6),
+    ...findCombination(teams50, 6)
+  ]
+  executeCombo(combinations)
 }
 
-// ! Nov 20
-// c_01_to_24_F6x1_8C6 @ $10 = 24 * 28 * $10 = $6720
-// extra_c_07_F6x1_8C6 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
-// ? Total = $6720 + $1120 = $7840
+// TODO: Nov 25 | $500
+const group_winner_c_49_to_50_F8x1_8C8 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU, ENG, POL, FRA, GER, MAR, BRA, POR]
+  ]
 
-// ! Nov 21
-// c_25_to_36_F6x1_8C6 @ $10 = 12 * 28 * $10 = $3360
-// extra_c_25_to_36_wo_group_E_F6x1_7C6 @ $10 = 12 * 7 * $10 = $840
-// extra_c_25_to_36_odds_wo_group_E_F6x1_7C6 @ $10 = ((6 * 7 * $10 * 2 Times) + (1 * 7 * $10 * 2 Times)) = $840 + $140 = $980
-// group_winner_c_25_To_36_F8x9_8C7_AND_8C8 @ $100 = 5 * 9 * 100 = $4500
-// Denis | group_winner_stop_loss_c_25_to_36_F5x1_5C5 @ $1000 = $1000
-// Jason | group_winner_stop_loss_c_25_to_36_F5x1_5C5 @ $2000 = $2000
-// ? Denis Total = $3360 + $840 + $980 + $4500 + $1000 = $10680
-// ? Jason Total = $3360 + $840 + $980 + $4500 + $2000 = $11680
-
-// ! Nov 22
-// c_37_to_42_F6x1_8C6 @ $10 = 6 * 28 * $10 = $1680
-// c_37_to_42_wo_group_E_F6x1_7C6 @ $10 = 6 * 7 * $10 = $420
-// Denis | c_37_to_42_group_A_to_D_F4x1_4C4 @ $200 = $200
-// Jason | c_37_to_42_group_A_to_D_F4x1_4C4 @ $400 = $400
-// ? Denis Total = $1680 + $420 + $200 + $100 = $2400
-// ? Jason Total = $1680 + $420 + $400 + $100 = $2600
-
-// ! Nov 25
-// c_43_F6x1_8C6 @ $50 = 1 * 28 * $50 = $1400
-// c_44_F6x1_8C6 @ $20 = 1 * 28 * $20 = $560
-// c_45_F6x1_8C6 @ $10 = 1 * 28 * $10 = $280
-// c_46_to_48_F6x1_8C6 @ $10 = 3 * 28 * $10 = $840
-// group_winner_c_43_to_45_F8x1_8C8 @ $2500 = $2500
-// group_winner_c_43_to_45_F8x8_8C7 @ $200 = 8 * $200 = $1600
-// group_winner_c_46_to_48_F8x1_8C8 @ $500 = $500
-// ? Total = $1400 + $560 + $280 + $840 + $2500 + $1600 + $500 = $7680
-
-// ! Total without failed
-// ! Denis Total | $7840 + $10680 + $2400 + $7680 = $28600
-// ! Jason Total | $7840 + $11680 + $2600 + $7680 = $29800
+  executeCombo(combinations, '500')
+}
