@@ -480,6 +480,14 @@ const group_winner_c_43_to_45_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '2500')
 }
 
+// TODO: Nov 25 | 8 * $200 = $1600
+const group_winner_c_43_to_45_F8x8_8C7 = () => { // eslint-disable-line
+  const combinations = [
+    [ECU, ENG, POL, FRA, JPY, MAR, BRA, POR]
+  ]
+  executeCombo(combinations, '200')
+}
+
 // TODO: Nov 25 | $500 = $500
 const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
   const combinations = [
@@ -517,8 +525,9 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
 // c_45_F6x1_8C6 @ $10 = 1 * 28 * $10 = $280
 // c_46_to_48_F6x1_8C6 @ $10 = 3 * 28 * $10 = $840
 // group_winner_c_43_to_45_F8x1_8C8 @ $2500 = $2500
+// group_winner_c_43_to_45_F8x8_8C7 @ $200 = 8 * $200 = $1600
 // group_winner_c_46_to_48_F8x1_8C8 @ $500 = $500
-// ? Total = $1400 + $560 + $280 + $840 + $2500 + $500 = $6040
+// ? Total = $1400 + $560 + $280 + $840 + $2500 + $1600 + $500 = $7680
 
 // ! Total without failed
 // ! Denis Total | $7840 + $10680 + $2300 = $20920
