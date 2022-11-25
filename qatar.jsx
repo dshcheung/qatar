@@ -360,6 +360,7 @@ const group_winner_stop_loss_c_25_to_36_F5x1_5C5 = () => { // eslint-disable-lin
   executeCombo([teams], '1000')
 }
 
+// ! Main Combination 37-42
 // ? Nov 22 | 6 * 28 * $10 = $1680
 const c_37_to_42_F6x1_8C6 = () => { // eslint-disable-line
   // Base Teams
@@ -426,6 +427,7 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
   executeCombo(combinations, '200')
 }
 
+// ! Main Combination 43-48
 // TODO: Nov 25 | 1 * 28 * $50 = $1400
 const c_43_F6x1_8C6 = () => { // eslint-disable-line
   const teams43 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
