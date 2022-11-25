@@ -520,7 +520,7 @@ const c_49_F6x1_7C6 = () => { // eslint-disable-line
   const combinations = [
     ...findCombination(teams49, 6)
   ]
-  executeCombo(combinations)
+  executeCombo(combinations, '40')
 }
 
 // TODO B: Nov 25 | 7 * $10 = $70
