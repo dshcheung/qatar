@@ -500,7 +500,7 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 49-56
-// TODO: Nov 25 | 2 * 28 * $10 = $1120
+// TODO: Nov 25 | 3 * 28 * $10 = $1120
 const c_49_to_50_F6x1_8C6 = () => { // eslint-disable-line
   const teams49 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
   const teams50 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
