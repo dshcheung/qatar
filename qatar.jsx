@@ -499,7 +499,7 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '500')
 }
 
-// ! Main Combination 49-56
+// ! Main Combination 49-50
 // TODO A: Nov 25 | 3 * 28 * $10 = $840
 const c_49_to_50_F6x1_8C6 = () => { // eslint-disable-line
   const teams49 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
@@ -513,7 +513,7 @@ const c_49_to_50_F6x1_8C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO B: Nov 25 | 7 * $40 = $280
+// ? Nov 25 | 7 * $40 = $280
 const c_49_F6x1_7C6 = () => { // eslint-disable-line
   const teams49 = [ECU_SEN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
@@ -523,7 +523,7 @@ const c_49_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations, '40')
 }
 
-// TODO B: Nov 25 | 7 * $10 = $70
+// ? Nov 25 | 7 * $10 = $70
 const c_50_F6x1_7C6 = () => { // eslint-disable-line
   const teams50 = [ECU_SEN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
 
@@ -533,7 +533,7 @@ const c_50_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 25 | $500
+// ? Nov 25 | $500
 const group_winner_c_49_to_50_F8x1_8C8 = () => { // eslint-disable-line
   const combinations = [
     [ECU, ENG, POL, FRA, GER, MAR, BRA, POR]
