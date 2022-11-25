@@ -89,7 +89,6 @@ const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
 const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
-const NED_ECU = '#tourn_GPF_50003675_1_0102_79327019_0_4_c'
 
 // GROUP B
 const ENG = '#tourn_GPW_50003675_2_1_18995020_0_1_c'
@@ -118,7 +117,6 @@ const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
 const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
 const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
-const BEL_CAN = '#tourn_GPF_50003675_6_0104_79326019_0_1_c'
 
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
@@ -427,27 +425,47 @@ const c_37_to_42_group_A_to_D_USA_F4x1_4C4 = () => { // eslint-disable-line
 
 // TODO: Nov 25 | 1 * 28 * $20 = $560
 const c_43_F6x1_8C6 = () => { // eslint-disable-line
-  const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
-  ]
-  executeCombo(combinations, '20')
-}
+  const teams43 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
-// ! BET 930 (#6) is largest bet
-// TODO: Nov 25 | 1 * 28 * $50 = $1400
-const c_44_F6x1_8C6 = () => { // eslint-disable-line
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
+    ...findCombination(teams43, 6)
   ]
   executeCombo(combinations, '50')
 }
 
-// TODO: Nov 45 | 1 * 28 * $20 = $560
-const c_45_F6x1_8C6 = () => { // eslint-disable-line
+// ! BET 930 (#6) is largest bet
+// TODO: Nov 25 | 1 * 28 * $20 = $560
+const c_44_F6x1_8C6 = () => { // eslint-disable-line
+  const teams44 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR]
+
   const combinations = [
-    [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SUI, POR_URU]
+    ...findCombination(teams44, 6)
   ]
   executeCombo(combinations, '20')
+}
+
+// TODO: Nov 25 | 1 * 28 * $10 = $280
+const c_45_F6x1_8C6 = () => { // eslint-disable-line
+  const teams45 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SUI, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams45, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Nov 25 | 3 * 28 * $10 = $840
+const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
+  const teams46 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams47 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams48 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SUI, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams46, 6),
+    ...findCombination(teams47, 6),
+    ...findCombination(teams48, 6)
+  ]
+  executeCombo(combinations)
 }
 
 // ! Nov 20
