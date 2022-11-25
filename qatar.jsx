@@ -459,7 +459,7 @@ const c_45_F6x1_8C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// Nov 25 | 3 * 28 * $10 = $840
+// ? Nov 25 | 3 * 28 * $10 = $840
 const c_46_to_48_F6x1_8C6 = () => { // eslint-disable-line
   const teams46 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
   const teams47 = [ECU_NED, ENG_IRN, POL_ARG, FRA_TUN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
@@ -511,7 +511,7 @@ const c_49_F6x1_8C6 = () => { // eslint-disable-line
 // ! Nov 20
 // c_01_to_24_F6x1_8C6 @ $10 = 24 * 28 * $10 = $6720
 // extra_c_07_F6x1_8C6 @ $10 x 4 Time = 28 * $10 * 4 Times = $1120
-// ? Total = 6720 + 1120 = 7840
+// ? Total = $6720 + $1120 = $7840
 
 // ! Nov 21
 // c_25_to_36_F6x1_8C6 @ $10 = 12 * 28 * $10 = $3360
@@ -542,5 +542,5 @@ const c_49_F6x1_8C6 = () => { // eslint-disable-line
 // ? Total = $1400 + $560 + $280 + $840 + $2500 + $1600 + $500 = $7680
 
 // ! Total without failed
-// ! Denis Total | $7840 + $10680 + $2300 = $20920
-// ! Jason Total | $7840 + $11680 + $2500 = $22120
+// ! Denis Total | $7840 + $10680 + $2400 + $7680 = $28600
+// ! Jason Total | $7840 + $11680 + $2600 + $7680 = $29800
