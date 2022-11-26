@@ -539,7 +539,7 @@ const group_winner_c_49_to_50_F8x1_8C8 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 51-58
-// TODO: Nov 26 | 8 * 7 * $10 = $560
+// ? Nov 26 | 8 * 7 * $10 = $560
 const c_51_to_58_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
@@ -568,7 +568,7 @@ const c_51_to_58_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 26 | 4 * 7 * $10 = $280
+// ? Nov 26 | 4 * 7 * $10 = $280
 const extra_c_51_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   const teams51 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
 
@@ -581,7 +581,7 @@ const extra_c_51_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 26 | 1 * 7 * $10 = $70
+// ? Nov 26 | 1 * 7 * $10 = $70
 const extra_c_52_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   const teams52 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_CMR, POR_KOR]
 
@@ -591,7 +591,7 @@ const extra_c_52_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 26 | 2 * 7 * $10 = $140
+// ? Nov 26 | 2 * 7 * $10 = $140
 const extra_c_53_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   const teams53 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_SRB, POR_KOR]
 
@@ -602,7 +602,7 @@ const extra_c_53_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 26 | 8 * 8 * $50 = $3200
+// ? Nov 26 | 8 * 8 * $50 = $3200
 const group_winner_c_51_to_58_wo_group_A_F7x8_7C7 = () => { // eslint-disable-line
   const combinations = [
     [IRN, POL, FRA, GER, MAR, BRA, POR], // A 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $50 = $292850
@@ -619,3 +619,25 @@ const group_winner_c_51_to_58_wo_group_A_F7x8_7C7 = () => { // eslint-disable-li
 }
 
 // $560 + $280 + $70 + $140 + $3200 = $4,250
+
+// ! Main Combination 59-62
+// TODO Nov 26 | 4 * 7 * $10 = $280
+const c_59_to_62_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_ECU IRN_ENG POL_ARG FRA_TUN JPN_GER MAR_BEL BRA_SRB POR_KOR
+  //                                         CAN_BEL BRA_CMR
+
+  const teams59 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR] // 01
+  const teams60 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_CMR, POR_KOR] // 02
+  const teams61 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_GER, CAN_BEL, BRA_SRB, POR_KOR] // 03
+  const teams62 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_GER, CAN_BEL, BRA_CMR, POR_KOR] // 04
+
+  const combinations = [
+    ...findCombination(teams59, 6),
+    ...findCombination(teams60, 6),
+    ...findCombination(teams61, 6),
+    ...findCombination(teams62, 6)
+  ]
+  executeCombo(combinations)
+}
