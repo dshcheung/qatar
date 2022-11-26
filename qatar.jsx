@@ -93,8 +93,10 @@ const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
 // GROUP B
 const ENG = '#tourn_GPW_50003675_2_1_18995020_0_1_c'
+const IRN = '#tourn_GPW_50003675_2_4_18995020_0_2_c'
 const ENG_USA = '#tourn_GPF_50003675_2_0102_79325019_0_2_c'
 const ENG_IRN = '#tourn_GPF_50003675_2_0104_79325019_0_1_c'
+const IRN_ENG = '#tourn_GPF_50003675_2_0401_79325019_0_4_c'
 
 // GROUP C
 const ARG = '#tourn_GPW_50003675_3_1_18989020_0_1_c'
@@ -113,6 +115,7 @@ const ESP = '#tourn_GPW_50003675_5_1_18988020_0_4_c'
 const JPN = '#tourn_GPW_50003675_5_3_18988020_0_3_c'
 const GER = '#tourn_GPW_50003675_5_2_18988020_0_2_c'
 const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
+const ESP_JPN = '#tourn_GPF_50003675_5_0103_79321019_0_12_c'
 const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const GER_JPN = '#tourn_GPF_50003675_5_0203_79321019_0_5_c'
 const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
@@ -120,8 +123,10 @@ const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
 // GROUP F
 const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
 const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
+const CAN = '#tourn_GPW_50003675_6_4_18993020_0_2_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
 const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
+const CAN_BEL = '#tourn_GPF_50003675_6_0401_79326019_0_4_c'
 
 // GROUP G
 const SRB = '#tourn_GPW_50003675_7_3_18990020_0_3_c'
@@ -500,21 +505,10 @@ const group_winner_c_46_to_48_F8x1_8C8 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 49-50
-// TODO A: Nov 25 | 3 * 28 * $10 = $840
-const c_49_to_50_F6x1_8C6 = () => { // eslint-disable-line
-  const teams49 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
-  const teams50 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
-
-  const combinations = [
-    ...findCombination(teams49, 6),
-    ...findCombination(teams49, 6),
-    ...findCombination(teams50, 6)
-  ]
-  executeCombo(combinations)
-}
-
 // ? Nov 25 | 7 * $40 = $280
-const c_49_F6x1_7C6 = () => { // eslint-disable-line
+const c_49_wo_group_B_F6x1_7C6 = () => { // eslint-disable-line
+  // Ignore Group B
+  // const teams49 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
   const teams49 = [ECU_SEN, POL_ARG, FRA_TUN, JPN_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
@@ -524,7 +518,9 @@ const c_49_F6x1_7C6 = () => { // eslint-disable-line
 }
 
 // ? Nov 25 | 7 * $10 = $70
-const c_50_F6x1_7C6 = () => { // eslint-disable-line
+const c_50_wo_group_B_F6x1_7C6 = () => { // eslint-disable-line
+  // Ignore Group B
+  // const teams50 = [ECU_SEN, ENG_IRN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
   const teams50 = [ECU_SEN, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
@@ -541,3 +537,82 @@ const group_winner_c_49_to_50_F8x1_8C8 = () => { // eslint-disable-line
 
   executeCombo(combinations, '500')
 }
+
+// ! Main Combination 51-58
+// TODO: Nov 26 | 8 * 7 * $10 = $560
+const c_51_to_58_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_ECU IRN_ENG POL_ARG FRA_TUN GER_JPN MAR_BEL BRA_SRB POR_KOR
+  //                                 ESP_JPN CAN_BEL BRA_CMR
+
+  const teams51 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 01 2 2 2
+  const teams52 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 02 2 2
+  const teams53 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 03 2 2
+  const teams54 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 04 2
+
+  const temps55 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 05
+  const temps56 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 06
+  const temps57 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 07
+  const temps58 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 08
+
+  const combinations = [
+    ...findCombination(teams51, 6),
+    ...findCombination(teams52, 6),
+    ...findCombination(teams53, 6),
+    ...findCombination(teams54, 6),
+    ...findCombination(temps55, 6),
+    ...findCombination(temps56, 6),
+    ...findCombination(temps57, 6),
+    ...findCombination(temps58, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Nov 26 | 4 * 7 * $10 = $280
+const extra_c_51_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  const teams51 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams51, 6),
+    ...findCombination(teams51, 6),
+    ...findCombination(teams51, 6),
+    ...findCombination(teams51, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Nov 26 | 1 * 7 * $10 = $70
+const extra_c_52_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  const teams52 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_CMR, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams52, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Nov 26 | 2 * 7 * $10 = $140
+const extra_c_53_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  const teams53 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    ...findCombination(teams53, 6),
+    ...findCombination(teams53, 6)
+  ]
+  executeCombo(combinations)
+}
+
+// TODO: Nov 26 | 4 * 8 * $100 = $3200
+const group_winner_c_51_to_58_wo_group_A_F7x8_7C7 = () => { // eslint-disable-line
+  const combinations = [
+    [IRN, POL, FRA, GER, MAR, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $100 = $585,700
+    [IRN, POL, FRA, GER, CAN, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 13 * 15 * 1.13 * 1.29 = 15690 * $100 = $1,569,000
+    [IRN, POL, FRA, ESP, MAR, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 1.25 * 5.6 * 1.13 * 1.29 =  563 * $100 = $56,300
+    [IRN, POL, FRA, ESP, CAN, BRA, POR] // 7X1 = 10 * 4.6 * 1.2 * 1.25 * 15 * 1.13 * 1.29 = 1508 * $100 = $150,800
+  ]
+
+  executeCombo(combinations, '100', '8')
+}
+
+// $560 + $280 + $70 + $140 + $3200 = $4,250
