@@ -38,7 +38,7 @@
 // c_51_to_58_wo_group_A_F6x1_7C6 @ $10 = 8 * 7 * $10 = $560
 // extra_c_51_wo_group_A_F6x1_7C6 @ $40 = 1 * 7 * $40 = $280
 // extra_c_52_wo_group_A_F6x1_7C6 @ $10 = 1 * 7 * $10 = $70
-// extra_c_53_wo_group_A_F6x1_7C6 @ $10 = 2 * 7 * $10 = $140
+// extra_c_53_wo_group_A_F6x1_7C6 @ $20 = 1 * 7 * $20 = $140
 // group_winner_c_51_to_58_wo_group_A_F7x8_7C7 @ 8 * 8 * $50 = $3200
 // c_59_to_62_wo_group_A_F6x1_7C6 @ $10 = 4 * 7 * $10 = $280
 // c_63_66_wo_group_A_F6x1_7C6 @ $10 = 4 * 7 * $10 = $280
