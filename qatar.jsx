@@ -619,10 +619,8 @@ const group_winner_c_51_to_58_wo_group_A_F7x8_7C7 = () => { // eslint-disable-li
   executeCombo(combinations, '50', '8')
 }
 
-// $560 + $280 + $70 + $140 + $3200 = $4,250
-
 // ! Main Combination 59-62
-// TODO Nov 26 | 4 * 7 * $10 = $280
+// ? Nov 26 | 4 * 7 * $10 = $280
 const c_59_to_62_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
@@ -643,6 +641,7 @@ const c_59_to_62_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
+// ? Nov 26 | 4 * 7 * $10 = $280
 const c_63_66_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
