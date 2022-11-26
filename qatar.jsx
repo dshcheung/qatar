@@ -546,11 +546,10 @@ const c_51_to_58_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   // NED_ECU IRN_ENG POL_ARG FRA_TUN GER_JPN MAR_BEL BRA_SRB POR_KOR
   //                                 ESP_JPN CAN_BEL BRA_CMR
 
-  const teams51 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 01 2 2 2
-  const teams52 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 02 2 2
-  const teams53 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 03 2 2
-  const teams54 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 04 2
-
+  const teams51 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 01
+  const teams52 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 02
+  const teams53 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 03
+  const teams54 = [IRN_ENG, POL_ARG, FRA_TUN, GER_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 04
   const temps55 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 05
   const temps56 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 06
   const temps57 = [IRN_ENG, POL_ARG, FRA_TUN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 07
@@ -603,16 +602,20 @@ const extra_c_53_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// TODO: Nov 26 | 4 * 8 * $100 = $3200
+// TODO: Nov 26 | 8 * 8 * $50 = $3200
 const group_winner_c_51_to_58_wo_group_A_F7x8_7C7 = () => { // eslint-disable-line
   const combinations = [
-    [IRN, POL, FRA, GER, MAR, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $100 = $585,700
-    [IRN, POL, FRA, GER, CAN, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 13 * 15 * 1.13 * 1.29 = 15690 * $100 = $1,569,000
-    [IRN, POL, FRA, ESP, MAR, BRA, POR], // 7X1 = 10 * 4.6 * 1.2 * 1.25 * 5.6 * 1.13 * 1.29 =  563 * $100 = $56,300
-    [IRN, POL, FRA, ESP, CAN, BRA, POR] // 7X1 = 10 * 4.6 * 1.2 * 1.25 * 15 * 1.13 * 1.29 = 1508 * $100 = $150,800
+    [IRN, POL, FRA, GER, MAR, BRA, POR], // A 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $50 = $292850
+    [IRN, POL, FRA, GER, MAR, BRA, POR], // A 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $50 = $292850
+    [IRN, POL, FRA, GER, MAR, BRA, POR], // A 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $50 = $292850
+    [IRN, POL, FRA, GER, MAR, BRA, POR], // A 7X1 = 10 * 4.6 * 1.2 * 13 * 5.6 * 1.13 * 1.29 = 5857 * $50 = $292850
+    [IRN, POL, FRA, GER, CAN, BRA, POR], // B 7X1 = 10 * 4.6 * 1.2 * 13 * 15 * 1.13 * 1.29 = 15690 * $50 = $784500
+    [IRN, POL, FRA, GER, CAN, BRA, POR], // B 7X1 = 10 * 4.6 * 1.2 * 13 * 15 * 1.13 * 1.29 = 15690 * $50 = $784500
+    [IRN, POL, FRA, ESP, MAR, BRA, POR], // C 7X1 = 10 * 4.6 * 1.2 * 1.25 * 5.6 * 1.13 * 1.29 =  563 * $50 = $56,300
+    [IRN, POL, FRA, ESP, CAN, BRA, POR] // D 7X1 = 10 * 4.6 * 1.2 * 1.25 * 15 * 1.13 * 1.29 = 1508 * $50 = $150,800
   ]
 
-  executeCombo(combinations, '100', '8')
+  executeCombo(combinations, '50', '8')
 }
 
 // $560 + $280 + $70 + $140 + $3200 = $4,250
