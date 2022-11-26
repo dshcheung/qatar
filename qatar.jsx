@@ -118,6 +118,7 @@ const ESP_GER = '#tourn_GPF_50003675_5_0102_79321019_0_11_c'
 const ESP_JPN = '#tourn_GPF_50003675_5_0103_79321019_0_12_c'
 const ESP_CRC = '#tourn_GPF_50003675_5_0104_79321019_0_10_c'
 const GER_JPN = '#tourn_GPF_50003675_5_0203_79321019_0_5_c'
+const JPN_ESP = '#tourn_GPF_50003675_5_0301_79321019_0_9_c'
 const JPN_GER = '#tourn_GPF_50003675_5_0302_79321019_0_8_c'
 
 // GROUP F
@@ -638,6 +639,26 @@ const c_59_to_62_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
     ...findCombination(teams60, 6),
     ...findCombination(teams61, 6),
     ...findCombination(teams62, 6)
+  ]
+  executeCombo(combinations)
+}
+
+const c_63_66_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_ECU IRN_ENG POL_ARG FRA_TUN JPN_ESP MAR_BEL BRA_SRB POR_KOR
+  //                                         CAN_BEL BRA_CMR
+
+  const teams63 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_ESP, MAR_BEL, BRA_SRB, POR_KOR] // 01
+  const teams64 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_ESP, MAR_BEL, BRA_CMR, POR_KOR] // 02
+  const teams65 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_ESP, CAN_BEL, BRA_SRB, POR_KOR] // 03
+  const teams66 = [IRN_ENG, POL_ARG, FRA_TUN, JPN_ESP, CAN_BEL, BRA_CMR, POR_KOR] // 04
+
+  const combinations = [
+    ...findCombination(teams63, 6),
+    ...findCombination(teams64, 6),
+    ...findCombination(teams65, 6),
+    ...findCombination(teams66, 6)
   ]
   executeCombo(combinations)
 }
