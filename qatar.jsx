@@ -84,7 +84,6 @@ const executeCombo = (combinations, valueAmount = '10', formula = '1') => {
 }
 
 // GROUP A
-const NED = '#tourn_GPW_50003675_1_1_18994020_0_2_c'
 const ECU = '#tourn_GPW_50003675_1_2_18994020_0_1_c'
 const NED_SEN = '#tourn_GPF_50003675_1_0103_79327019_0_6_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
@@ -130,7 +129,9 @@ const BEL = '#tourn_GPW_50003675_6_1_18993020_0_1_c'
 const MAR = '#tourn_GPW_50003675_6_3_18993020_0_4_c'
 const CAN = '#tourn_GPW_50003675_6_4_18993020_0_2_c'
 const BEL_MAR = '#tourn_GPF_50003675_6_0103_79326019_0_3_c'
+const CRO_MAR = '#tourn_GPF_50003675_6_0203_79326019_0_9_c'
 const MAR_BEL = '#tourn_GPF_50003675_6_0301_79326019_0_10_c'
+const MAR_CRO = '#tourn_GPF_50003675_6_0302_79326019_0_12_c'
 const CAN_BEL = '#tourn_GPF_50003675_6_0401_79326019_0_4_c'
 
 // GROUP G
@@ -666,10 +667,6 @@ const c_63_to_66_wo_group_A_F6x1_7C6 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// ! Nov 27
-// ! Nov 27
-// ! Nov 27
-// ! Nov 27
 // ! Main Combination 67-74
 // ? Nov 27 | 8 * 28 * $50 = $11200
 const c_67_to_74_F8x28_8C6 = () => { // eslint-disable-line
@@ -712,12 +709,12 @@ const c_67_to_74_F8x28_8C6 = () => { // eslint-disable-line
 // ! Main Combination 67-74 | 7x1 8C7
 // ? Nov 27 | 6 * 8 * $10 = $480
 const c_67_to_74_F8x8_8C7 = () => { // eslint-disable-line
-  const teams68 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR] // 02 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams70 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR] // 06 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams71 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 03 | 8x1 $00 | 7x1 $10 | 6x1 $50
-  const teams72 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 04 | 8x1 $00 | 7x1 $10 | 6x1 $50
-  const teams73 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 07 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams74 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 08 | 8x1 $10 | 7x1 $10 | 6x1 $50
+  const teams68 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR]
+  const teams70 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR]
+  const teams71 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams72 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR]
+  const teams73 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams74 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
     teams68,
@@ -732,8 +729,8 @@ const c_67_to_74_F8x8_8C7 = () => { // eslint-disable-line
 
 // ? Nov 27 | 2 * 8 * $50 = $800
 const c_67_and_69_F8x8_8C7 = () => { // eslint-disable-line
-  const teams67 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR] // 01 | 8x1 $60 | 7x1 $50 | 6x1 $50
-  const teams69 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR] // 05 | 8x1 $80 | 7x1 $50 | 6x1 $50
+  const teams67 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams69 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
     teams67,
@@ -745,10 +742,10 @@ const c_67_and_69_F8x8_8C7 = () => { // eslint-disable-line
 // ! Main Combination 67-74 | 8x1 8C8
 // ? Nov 27 | 4 * $10 = $40
 const c_67_to_74_F8x1_8C8 = () => { // eslint-disable-line
-  const teams68 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR] // 02 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams70 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR] // 06 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams73 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR] // 07 | 8x1 $10 | 7x1 $10 | 6x1 $50
-  const teams74 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR] // 08 | 8x1 $10 | 7x1 $10 | 6x1 $50
+  const teams68 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR]
+  const teams70 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_SRB, POR_KOR]
+  const teams73 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_SRB, POR_KOR]
+  const teams74 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
     teams68,
@@ -761,7 +758,7 @@ const c_67_to_74_F8x1_8C8 = () => { // eslint-disable-line
 
 // ? Nov 27 | $60
 const c_67_F8x1_8C8 = () => { // eslint-disable-line
-  const teams67 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR] // 01 | 8x1 $60 | 7x1 $50 | 6x1 $50
+  const teams67 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
     teams67
@@ -771,7 +768,7 @@ const c_67_F8x1_8C8 = () => { // eslint-disable-line
 
 // ? Nov 27 | $80
 const c_69_F8x1_8C8 = () => { // eslint-disable-line
-  const teams69 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR] // 05 | 8x1 $80 | 7x1 $50 | 6x1 $50
+  const teams69 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_SRB, POR_KOR]
 
   const combinations = [
     teams69
@@ -821,14 +818,14 @@ const c_75_to_82_F8x28_8C6 = () => { // eslint-disable-line
 // ! Main Combination 75-82 | 7x1 8C7
 // ? Nov 27 | 8 * 8 * $10 =  $640
 const c_75_to_82_F8x8_8C7 = () => { // eslint-disable-line
-  const teams75 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR] // 01 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams76 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR] // 02 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams77 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR] // 05 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams78 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR] // 06 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams79 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 03 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams80 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 04 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams81 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 07 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams82 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 08 | 8x1 $10 | 7x1 $10 | 6x1 $30
+  const teams75 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams76 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR]
+  const teams77 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams78 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR]
+  const teams79 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams80 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR]
+  const teams81 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams82 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR]
 
   const combinations = [
     teams75,
@@ -843,15 +840,15 @@ const c_75_to_82_F8x8_8C7 = () => { // eslint-disable-line
   executeCombo(combinations, '10', '8')
 }
 
-// ! main Combination 75-82 | 8x1 8C8
+// ! Main Combination 75-82 | 8x1 8C8
 // ? Nov 27 | 6 * $10 = $60
 const c_75_to_82_F8x1_8C8 = () => { // eslint-disable-line
-  const teams75 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR] // 01 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams76 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR] // 02 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams77 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR] // 05 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams78 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR] // 06 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams81 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR] // 07 | 8x1 $10 | 7x1 $10 | 6x1 $30
-  const teams82 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR] // 08 | 8x1 $10 | 7x1 $10 | 6x1 $30
+  const teams75 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams76 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR]
+  const teams77 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams78 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CAN_BEL, BRA_CMR, POR_KOR]
+  const teams81 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, MAR_BEL, BRA_CMR, POR_KOR]
+  const teams82 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_JPN, CAN_BEL, BRA_CMR, POR_KOR]
 
   const combinations = [
     teams75,
@@ -863,3 +860,132 @@ const c_75_to_82_F8x1_8C8 = () => { // eslint-disable-line
   ]
   executeCombo(combinations)
 }
+
+// ! Nov 28
+// ! Nov 28
+// ! Nov 28
+// ! Nov 28
+// ! Main Combination 83-86 | 6x1 8C6
+
+// TODO: Nov 28 | 28 * $200 = $5600
+const c_83_F8x28_8C6 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_SEN IRN_ENG POL_ARG FRA_AUS ESP_GER MAR_CRO BRA_SRB POR_KOR
+  //                                         CRO_MAR BRA_CMR
+  // Odds
+  // 2.90    10.10   4.90    2.90    1.14    5.50    2.75    4.20
+  //                                         2.06    16.0
+  // ? MAR_CRO SRB
+  // Highest Odds 6x1
+  // 2.9 * 10.10 * 4.90 * 5.50 * 2.75 * 4.20 = 9117
+  //  9117 * $1090 = $9937530
+  // Highest Odds 7x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 5.50 * 2.75 * 4.20 = 26439
+  // 26439 * $370 = $9782430
+  // Highest Odds 8x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 1.14 * 5.50 * 2.75 * 4.20 = 30141
+  // 30141 * $330 = $9946530
+  // ? MAR_CRO CMR
+  // Highest Odds 7x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 5.50 * 16.0 * 4.20 = 153831
+  // 153831 * $60 = $9229860
+  // Highest Odds 8x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 1.14 * 5.50 * 16.0 * 4.20 = 175367
+  // 175367 * $50 = $8768350
+  // ? CRO_MAR SRB
+  // Highest Odds 7x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 2.06 * 2.75 * 4.20 = 9902
+  // 9902 * $1000 = $9902000
+  // Highest Odds 8x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 1.14 * 2.06 * 2.75 * 4.20 = 11289
+  // 11289 * $880 = $9934320
+  // ? CRO_MAR CMR
+  // Highest Odds 7x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 2.06 * 16.0 * 4.20 = 57616
+  // 57616 * $170 = $9794720
+  // Highest Odds 8x1
+  // 2.9 * 10.10 * 4.90 * 2.9 * 1.14 * 2.06 * 16.0 * 4.20 = 65683
+  // 65683 * $150 = $9852450
+
+  // Teams
+  // const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR] // 01 | 8x1 $330 | 7x1 $370 | 6x1 $200
+  // const teams84 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_CMR, POR_KOR] // 02 | 8x1  $50 | 7x1  $60 | 6x1   $0
+  // const teams85 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_SRB, POR_KOR] // 03 | 8x1 $100 | 7x1 $100 | 6x1   $0
+  // const teams86 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_CMR, POR_KOR] // 04 | 8x1  $50 | 7x1  $60 | 6x1   $0
+
+  const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    teams83
+  ]
+  executeCombo(combinations, '200', '28')
+}
+
+// ! Main Combination 83-86 | 7x1 8C7
+// TODO: Nov 28 | 8 * $370 = $2960
+const c_83_F8x8_8C7 = () => { // eslint-disable-line
+  const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    teams83
+  ]
+  executeCombo(combinations, '370', '8')
+}
+
+// TODO: Nov 28 | 8 * $100 = $800
+const c_85_F8x8_8C7 = () => { // eslint-disable-line
+  const teams85 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    teams85
+  ]
+  executeCombo(combinations, '100', '8')
+}
+
+// TODO: Nov 28 | 2 * 8 * $60 = $960
+const c_84_and_86_F8x8_8C7 = () => { // eslint-disable-line
+  const teams84 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_CMR, POR_KOR]
+  const teams86 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_CMR, POR_KOR]
+
+  const combinations = [
+    teams84,
+    teams86
+  ]
+  executeCombo(combinations, '60', '8')
+}
+
+// ! Main Combination 83-86 | 8x1 8C8
+// TODO: Nov 28 | $330
+const c_83_F8x1_8C8 = () => { // eslint-disable-line
+  const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    teams83
+  ]
+  executeCombo(combinations, '330')
+}
+
+// TODO: Nov 28 | $100
+const c_85_F8x1_8C8 = () => { // eslint-disable-line
+  const teams85 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_SRB, POR_KOR]
+
+  const combinations = [
+    teams85
+  ]
+  executeCombo(combinations, '100')
+}
+
+// TODO: Nov 28 | 2 * $50 = $100
+const c_84_and_86_F8x1_8C8 = () => { // eslint-disable-line
+  const teams84 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_CMR, POR_KOR]
+  const teams86 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_CMR, POR_KOR]
+
+  const combinations = [
+    teams84,
+    teams86
+  ]
+  executeCombo(combinations, '50')
+}
+
+// 5600 + 2960 + 800 + 960 + 330 + 100 + 100 = 10850
