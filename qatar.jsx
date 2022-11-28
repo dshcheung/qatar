@@ -866,8 +866,7 @@ const c_75_to_82_F8x1_8C8 = () => { // eslint-disable-line
 // ! Nov 28
 // ! Nov 28
 // ! Main Combination 83-86 | 6x1 8C6
-
-// TODO: Nov 28 | 28 * $200 = $5600
+// ? Nov 28 | 28 * $200 = $5600
 const c_83_F8x28_8C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
@@ -923,7 +922,7 @@ const c_83_F8x28_8C6 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 83-86 | 7x1 8C7
-// TODO: Nov 28 | 8 * $370 = $2960
+// ? Nov 28 | 8 * $370 = $2960
 const c_83_F8x8_8C7 = () => { // eslint-disable-line
   const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR]
 
@@ -933,7 +932,7 @@ const c_83_F8x8_8C7 = () => { // eslint-disable-line
   executeCombo(combinations, '370', '8')
 }
 
-// TODO: Nov 28 | 8 * $100 = $800
+// ? Nov 28 | 8 * $100 = $800
 const c_85_F8x8_8C7 = () => { // eslint-disable-line
   const teams85 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_SRB, POR_KOR]
 
@@ -943,7 +942,7 @@ const c_85_F8x8_8C7 = () => { // eslint-disable-line
   executeCombo(combinations, '100', '8')
 }
 
-// TODO: Nov 28 | 2 * 8 * $60 = $960
+// ? Nov 28 | 2 * 8 * $60 = $960
 const c_84_and_86_F8x8_8C7 = () => { // eslint-disable-line
   const teams84 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_CMR, POR_KOR]
   const teams86 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_CMR, POR_KOR]
@@ -956,7 +955,7 @@ const c_84_and_86_F8x8_8C7 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 83-86 | 8x1 8C8
-// TODO: Nov 28 | $330
+// ? Nov 28 | $330
 const c_83_F8x1_8C8 = () => { // eslint-disable-line
   const teams83 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_SRB, POR_KOR]
 
@@ -966,7 +965,7 @@ const c_83_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '330')
 }
 
-// TODO: Nov 28 | $100
+// ? Nov 28 | $100
 const c_85_F8x1_8C8 = () => { // eslint-disable-line
   const teams85 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_SRB, POR_KOR]
 
@@ -976,7 +975,7 @@ const c_85_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '100')
 }
 
-// TODO: Nov 28 | 2 * $50 = $100
+// ? Nov 28 | 2 * $50 = $100
 const c_84_and_86_F8x1_8C8 = () => { // eslint-disable-line
   const teams84 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, MAR_CRO, BRA_CMR, POR_KOR]
   const teams86 = [NED_SEN, IRN_ENG, POL_ARG, FRA_AUS, ESP_GER, CRO_MAR, BRA_CMR, POR_KOR]
