@@ -1045,7 +1045,7 @@ const c_87_F8x8_8C7 = () => { // eslint-disable-line
 }
 
 // ! Main Combination 87-98 | 6x1 6C6
-// TODO: Nov 29 | 2 * $2500 = $5000
+// TODO: Nov 29 | 2 * $2380 = $4760
 const c_87_89_F6x1_6C6 = () => { // eslint-disable-line
   const teams87 = [NED_SEN, IRN_ENG, POL_ARG, MAR_CRO, BRA_SRB, POR_GHA]
   const teams89 = [NED_SEN, IRN_ENG, POL_ARG, CRO_MAR, BRA_SRB, POR_GHA]
@@ -1053,7 +1053,7 @@ const c_87_89_F6x1_6C6 = () => { // eslint-disable-line
     teams87,
     teams89
   ]
-  executeCombo(combinations, '2500')
+  executeCombo(combinations, '2380')
 }
 
 // TODO: Nov 29 | 4 * $500 = $2000
@@ -1097,4 +1097,4 @@ const c_92_94_96_98_F6x1_6C6 = () => { // eslint-disable-line
   executeCombo(combinations, '300')
 }
 
-// 5600 + 2960 + 5000 + 2000 + 700 + 1200 = 17460
+// 5600 + 2960 + 4760 + 2000 + 700 + 1200 = 17220
