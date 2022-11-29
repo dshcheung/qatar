@@ -88,8 +88,9 @@ const ECU = '#tourn_GPW_50003675_1_2_18994020_0_1_c'
 const NED_SEN = '#tourn_GPF_50003675_1_0103_79327019_0_6_c'
 const NED_QAT = '#tourn_GPF_50003675_1_0104_79327019_0_5_c'
 const ECU_NED = '#tourn_GPF_50003675_1_0201_79327019_0_1_c'
-const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
+const NED_ECU = '#tourn_GPF_50003675_1_0102_79327019_0_4_c'
 const ECU_SEN = '#tourn_GPF_50003675_1_0203_79327019_0_3_c'
+const ECU_QAT = '#tourn_GPF_50003675_1_0204_79327019_0_2_c'
 const QAT_NED = '#tourn_GPF_50003675_1_0401_79327019_0_8_c'
 
 // GROUP B
@@ -147,6 +148,7 @@ const CMR_BRA = '#tourn_GPF_50003675_7_0401_79324019_0_4_c'
 // GROUP H
 const POR = '#tourn_GPW_50003675_8_1_18991020_0_3_c'
 const POR_URU = '#tourn_GPF_50003675_8_0102_79323019_0_9_c'
+const POR_GHA = '#tourn_GPF_50003675_8_0103_79323019_0_7_c'
 const POR_KOR = '#tourn_GPF_50003675_8_0104_79323019_0_8_c'
 // ! COPY THIS IN A FRESH HKJC CONSOLE END
 
@@ -861,10 +863,6 @@ const c_75_to_82_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations)
 }
 
-// ! Nov 28
-// ! Nov 28
-// ! Nov 28
-// ! Nov 28
 // ! Main Combination 83-86 | 6x1 8C6
 // ? Nov 28 | 28 * $200 = $5600
 const c_83_F8x28_8C6 = () => { // eslint-disable-line
@@ -987,4 +985,124 @@ const c_84_and_86_F8x1_8C8 = () => { // eslint-disable-line
   executeCombo(combinations, '50')
 }
 
-// 5600 + 2960 + 800 + 960 + 330 + 100 + 100 = 10850
+// ! Nov 29
+// ! Nov 29
+// ! Nov 29
+// ! Nov 29
+// ! Nov 29
+// ! Main Combination 87-94 | 7x1 8C7
+// TODO: Nov 29 | 8 * $370 = $2960
+const c_87_F8x8_8C7 = () => { // eslint-disable-line
+  // Base Teams
+  // A       B       C       D       E       F       G       H
+  // NED_SEN IRN_ENG POL_ARG FRA_DEN ESP_GER MAR_CRO BRA_SRB POR_GHA
+  // NED_ECU                                 CRO_MAR BRA_SUI
+  //                                         MAR_BEL
+  // Odds
+  // 2.90    10.10   4.90    1.40    1.14    5.50    2.35    2.15
+  // 1.90                                    2.06    1.45
+  // ? const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA] // 8x1 $1570 | 7x1 $370
+  // Highest Odds 7x1 | 2.90 * 10.10 * 4.9 * 1.4 * 5.50 * 2.35 * 2.15 = 5584 | 10000000 / 5584 = 1790
+  // Highest Odds 8x1 | 2.90 * 10.10 * 4.9 * 1.4 * 1.14 * 5.50 * 2.35 * 2.15 = 6366 | 10000000 / 6366 = 1570
+  // ? const teams88 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SUI, POR_GHA] // 8x1 $330
+  // Highest Odds 7x1 | 2.90 * 10.10 * 4.9 * 1.4 * 5.50 * 1.45 * 2.15 = 3446 | 10000000 / 3446 = 2900
+  // Highest Odds 8x1 | 2.90 * 10.10 * 4.9 * 1.4 * 1.14 * 5.50 * 1.45 * 2.15 = 3928 | 10000000 / 3928 = 2540
+  // ? const teams89 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SRB, POR_GHA] // 8x1 $850
+  // Highest Odds 7x1 | 2.90 * 10.10 * 4.9 * 1.4 * 2.06 * 2.35 * 2.15 = 2092 | 10000000 / 2092 = 4780
+  // Highest Odds 8x1 | 2.90 * 10.10 * 4.9 * 1.4 * 1.14 * 2.06 * 2.35 * 2.15 = 2385 | 10000000 / 2385 = 4190
+  // ? const teams90 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SUI, POR_GHA] // 8x1 $350
+  // Highest Odds 7x1 | 2.90 * 10.10 * 4.9 * 1.4 * 2.06 * 1.45 * 2.15 = 1291 | 10000000 / 1291 = 7740
+  // Highest Odds 8x1 | 2.90 * 10.10 * 4.9 * 1.4 * 1.14 * 2.06 * 1.45 * 2.15 = 1472 | 10000000 / 1472 = 6790
+  // ? const teams91 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA] // 8x1 $300
+  // Highest Odds 7x1 | 1.90 * 10.10 * 4.9 * 1.4 * 5.50 * 2.35 * 2.15 = 3659 | 10000000 / 3659 = 2730
+  // Highest Odds 8x1 | 1.90 * 10.10 * 4.9 * 1.4 * 1.14 * 5.50 * 2.35 * 2.15 = 4171 | 10000000 / 4171 = 2390
+  // ? const teams92 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SUI, POR_GHA] // 8x1 $200
+  // Highest Odds 7x1 | 1.90 * 10.10 * 4.9 * 1.4 * 5.50 * 1.45 * 2.15 = 2258 | 10000000 / 2258 = 4420
+  // Highest Odds 8x1 | 1.90 * 10.10 * 4.9 * 1.4 * 1.14 * 5.50 * 1.45 * 2.15 = 2574 | 10000000 / 2574 = 3880
+  // ? const teams93 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SRB, POR_GHA] // 8x1 $650
+  // Highest Odds 7x1 | 1.90 * 10.10 * 4.9 * 1.4 * 2.06 * 2.35 * 2.15 = 1371 | 10000000 / 1371 = 7290
+  // Highest Odds 8x1 | 1.90 * 10.10 * 4.9 * 1.4 * 1.14 * 2.06 * 2.35 * 2.15 = 1562 | 10000000 / 1562 = 6400
+  // ? const teams94 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SUI, POR_GHA] // 8x1 $350
+  // Highest Odds 7x1 | 1.90 * 10.10 * 4.9 * 1.4 * 2.06 * 1.45 * 2.15 = 846 | 10000000 / 846 = 11820
+  // Highest Odds 8x1 | 1.90 * 10.10 * 4.9 * 1.4 * 1.14 * 2.06 * 1.45 * 2.15 = 964 | 10000000 / 964 = 10370
+
+  const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
+
+  const combinations = [
+    teams87
+  ]
+  executeCombo(combinations, '370', '8')
+}
+
+// ! Main Combination 87-94 | 8x1 8C8
+// TODO: Nov 29 | $1570
+const c_87_F8x1_8C8 = () => { // eslint-disable-line
+  const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
+  const combinations = [
+    teams87
+  ]
+  executeCombo(combinations, '1570')
+}
+
+// TODO: Nov 29 | $330
+const c_88_F8x1_8C8 = () => { // eslint-disable-line
+  const teams88 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SUI, POR_GHA]
+  const combinations = [
+    teams88
+  ]
+  executeCombo(combinations, '330')
+}
+
+// TODO: Nov 29 | $850
+const c_89_F8x1_8C8 = () => { // eslint-disable-line
+  const teams89 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SRB, POR_GHA]
+  const combinations = [
+    teams89
+  ]
+  executeCombo(combinations, '850')
+}
+
+// TODO: Nov 29 | $350
+const c_90_F8x1_8C8 = () => { // eslint-disable-line
+  const teams90 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SUI, POR_GHA]
+  const combinations = [
+    teams90
+  ]
+  executeCombo(combinations, '350')
+}
+
+// TODO: Nov 29 | $300
+const c_91_F8x1_8C8 = () => { // eslint-disable-line
+  const teams91 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
+  const combinations = [
+    teams91
+  ]
+  executeCombo(combinations, '300')
+}
+
+// TODO: Nov 29 | $200
+const c_92_F8x1_8C8 = () => { // eslint-disable-line
+  const teams92 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SUI, POR_GHA]
+  const combinations = [
+    teams92
+  ]
+  executeCombo(combinations, '200')
+}
+
+// TODO: Nov 29 | $650
+const c_93_F8x1_8C8 = () => { // eslint-disable-line
+  const teams93 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SRB, POR_GHA]
+  const combinations = [
+    teams93
+  ]
+  executeCombo(combinations, '650')
+}
+
+// TODO: Nov 29 | $350
+const c_94_F8x1_8C8 = () => { // eslint-disable-line
+  const teams94 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SUI, POR_GHA]
+  const combinations = [
+    teams94
+  ]
+  executeCombo(combinations, '350')
+}
