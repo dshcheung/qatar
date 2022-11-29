@@ -990,18 +990,18 @@ const c_84_and_86_F8x1_8C8 = () => { // eslint-disable-line
 // ! Nov 29
 // ! Nov 29
 // ! Nov 29
-// ! Main Combination 87-94 | 7x1 8C7
-// TODO: Nov 29 | 8 * $370 = $2960
-const c_87_F8x8_8C7 = () => { // eslint-disable-line
+// ! Main Combination 87-94 | 6x1 8C6
+// TODO: Nov 29 | 28 * $200 = $5600
+const c_87_F8x28_8C6 = () => { // eslint-disable-line
   // Base Teams
   // A       B       C       D       E       F       G       H
   // NED_SEN IRN_ENG POL_ARG FRA_DEN ESP_GER MAR_CRO BRA_SRB POR_GHA
   // NED_ECU                                 CRO_MAR BRA_SUI
-  //                                         MAR_BEL
   // Odds
   // 2.90    10.10   4.90    1.40    1.14    5.50    2.35    2.15
   // 1.90                                    2.06    1.45
   // ? const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA] // 8x1 $1570 | 7x1 $370
+  // Highest Odds 6x1 | 2.90 * 10.10 * 4.9 * 5.50 * 2.35 * 2.15 = 3989 | 10000000 / 3989 = 2500
   // Highest Odds 7x1 | 2.90 * 10.10 * 4.9 * 1.4 * 5.50 * 2.35 * 2.15 = 5584 | 10000000 / 5584 = 1790
   // Highest Odds 8x1 | 2.90 * 10.10 * 4.9 * 1.4 * 1.14 * 5.50 * 2.35 * 2.15 = 6366 | 10000000 / 6366 = 1570
   // ? const teams88 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SUI, POR_GHA] // 8x1 $330
@@ -1025,6 +1025,17 @@ const c_87_F8x8_8C7 = () => { // eslint-disable-line
   // ? const teams94 = [NED_ECU, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, CRO_MAR, BRA_SUI, POR_GHA] // 8x1 $350
   // Highest Odds 7x1 | 1.90 * 10.10 * 4.9 * 1.4 * 2.06 * 1.45 * 2.15 = 846 | 10000000 / 846 = 11820
   // Highest Odds 8x1 | 1.90 * 10.10 * 4.9 * 1.4 * 1.14 * 2.06 * 1.45 * 2.15 = 964 | 10000000 / 964 = 10370
+
+  const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
+  const combinations = [
+    teams87
+  ]
+  executeCombo(combinations, '200', '28')
+}
+
+// ! Main Combination 87-94 | 7x1 8C7
+// TODO: Nov 29 | 8 * $370 = $2960
+const c_87_F8x8_8C7 = () => { // eslint-disable-line
 
   const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
 
@@ -1106,3 +1117,5 @@ const c_94_F8x1_8C8 = () => { // eslint-disable-line
   ]
   executeCombo(combinations, '350')
 }
+
+// 5600 + 2960 + 1570 + 330 + 850 + 350 + 300 + 200 + 650 + 350 = 13160
