@@ -1036,7 +1036,6 @@ const c_87_F8x28_8C6 = () => { // eslint-disable-line
 // ! Main Combination 87-94 | 7x1 8C7
 // TODO: Nov 29 | 8 * $370 = $2960
 const c_87_F8x8_8C7 = () => { // eslint-disable-line
-
   const teams87 = [NED_SEN, IRN_ENG, POL_ARG, FRA_DEN, ESP_GER, MAR_CRO, BRA_SRB, POR_GHA]
 
   const combinations = [
